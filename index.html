@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas de los Mandamientos</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .tablas-container {
+            display: flex;
+            gap: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tabla {
+            position: relative;
+            width: 200px;
+            height: 400px;
+            background-color: #8b7355;
+            border: 10px solid #5a4a3a;
+            border-radius: 90px 90px 0 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .mandamientos {
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .luz {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+            animation: brillo 5s infinite;
+        }
+
+        @keyframes brillo {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(50%, 50%);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        /* Efecto de relámpagos azules */
+.relampagos-azules {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 255, 0.1), rgba(0, 0, 255, 0));
+    z-index: 1;
+    overflow: hidden;
+}
+
+.relampagos-azules::before,
+.relampagos-azules::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 20%,
+        rgba(0, 191, 255, 0.8) 40%, /* Azul claro */
+        transparent 60%
+    );
+    opacity: 0;
+    animation: relampaguear-azul 2s infinite;
+}
+
+.relampagos-azules::before {
+    transform: rotate(30deg);
+    animation-delay: 0.5s;
+}
+
+.relampagos-azules::after {
+    transform: rotate(-30deg);
+    animation-delay: 1s;
+}
+
+@keyframes relampaguear-azul {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    10% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    20% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+    </style>
+</head>
+<body>
+  <div class="relampagos-azules"></div>
+  <div class="tablas-container">
+      <!-- Tus tablas aquí -->
+    <div class="tablas-container">
+        <div class="tabla">
+            <div class="luz"></div>
+            <div class="mandamientos">
+                <p>1. No tendrás dioses ajenos delante de mí.</p>
+                <p>2. No te harás imagen.</p>
+                <p>3. No tomarás el nombre de Jehová tu Dios en vano.</p>
+                <p>4. Acuérdate del día de reposo para santificarlo.</p>
+                <p>5. Honra a tu padre y a tu madre.</p>
+            </div>
+        </div>
+        <div class="tabla">
+            <div class="luz"></div>
+            <div class="mandamientos">
+                <p>6. No matarás.</p>
+                <p>7. No cometerás adulterio.</p>
+                <p>8. No hurtarás.</p>
+                <p>9. No hablarás contra tu prójimo falso testimonio.</p>
+                <p>10. No codiciarás la casa de tu prójimo, ni su mujer, ni su siervo, ni su criada, ni su buey, ni su asno, ni cosa alguna de tu prójimo.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
