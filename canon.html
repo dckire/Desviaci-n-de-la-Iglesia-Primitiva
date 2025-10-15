@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcion y su Canon (144 d.C.) - Punto de Inflexión en la Historia Bíblica</title>
+    <style>
+        :root {
+            --color-primary: #5D4037;
+            --color-secondary: #8D6E63;
+            --color-accent: #BF360C;
+            --color-gold: #D4AF37;
+            --color-light: #F5F5DC;
+            --color-dark: #3E2723;
+            --color-text: #333;
+            --color-white: #FFFFFF;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            --shadow-heavy: 0 8px 30px rgba(0, 0, 0, 0.25);
+            --transition: all 0.3s ease;
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--color-light);
+            color: var(--color-text);
+            line-height: 1.6;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238D6E63' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            color: var(--color-white);
+            padding: 2rem;
+            text-align: center;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-heavy);
+            border-bottom: 5px solid var(--color-gold);
+        }
+
+        h1 {
+            font-family: 'Times New Roman', serif;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--color-gold);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--color-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--color-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .card-header {
+            border-bottom: 3px solid var(--color-gold);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--color-accent);
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: linear-gradient(to right, rgba(191, 54, 12, 0.1) 0%, rgba(255, 255, 255, 0.5) 100%);
+            border-left: 5px solid var(--color-accent);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .quote {
+            font-style: italic;
+            color: var(--color-dark);
+            border-left: 4px solid var(--color-gold);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .canon-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .canon-comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .canon-column {
+            background: var(--color-white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .canon-column h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-gold);
+        }
+
+        .canon-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .canon-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed var(--color-secondary);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .canon-list li:before {
+            content: "•";
+            color: var(--color-accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .theology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .theology-card {
+            background-color: var(--color-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--color-accent);
+        }
+
+        .theology-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .theology-header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            color: var(--color-white);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .theology-title {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .theology-body {
+            padding: 1.5rem;
+        }
+
+        .response-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .response-card {
+            background-color: var(--color-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .response-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .response-header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            color: var(--color-white);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .response-name {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .response-role {
+            font-size: 1rem;
+            color: var(--color-secondary);
+        }
+
+        .response-body {
+            padding: 1.5rem;
+        }
+
+        .consequences-section {
+            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
+            color: var(--color-white);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            margin-top: 3rem;
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .consequences-section h2 {
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            color: var(--color-dark);
+            border-top: 1px solid var(--color-secondary);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scripture-reference {
+            font-size: 0.9rem;
+            color: var(--color-secondary);
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--color-gold);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 10px;
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: var(--color-accent);
+            border: 3px solid var(--color-gold);
+            border-radius: 50%;
+            left: -10px;
+            top: 5px;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--color-gold);
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Marcion y su Canon (144 d.C.)</h1>
+            <p class="subtitle">El Punto de Inflexión que Forzó a la Iglesia a Definir el Canon del Nuevo Testamento</p>
+        </header>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <section class="card fade-in">
+                    <div class="card-header">
+                        <h2>Marcion: El Hombre que Desafió la Ortodoxia</h2>
+                    </div>
+                    
+                    <h3>Contexto Histórico</h3>
+                    <p>Marción (c. 85-160 d.C.) fue un rico naviero y teólogo originario de Sinope, en el Ponto (actual Turquía). Hijo de un obispo, llegó a Roma alrededor del año 140 d.C., donde se unió a la comunidad cristiana y realizó una importante donación a la iglesia.</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Punto crucial:</strong> En el año 144 d.C., Marción presentó formalmente su propia versión del cristianismo ante los ancianos de Roma, proponiendo el primer canon definido del Nuevo Testamento. Su propuesta fue rechazada y fue excomulgado, devolviéndosele su donación.</p>
+                    </div>
+                    
+                    <h3>Teología Marcionita</h3>
+                    
+                    <div class="theology-grid">
+                        <div class="theology-card">
+                            <div class="theology-header">
+                                <div class="theology-title">Dualismo Teológico</div>
+                            </div>
+                            <div class="theology-body">
+                                <p>Marción enseñaba la existencia de dos dioses: el Dios del Antiguo Testamento (Demiurgo), creador del mundo material y de la ley, y el Dios del Nuevo Testamento, Padre de Jesucristo, Dios de amor y gracia.</p>
+                            </div>
+                        </div>
+
+                        <div class="theology-card">
+                            <div class="theology-header">
+                                <div class="theology-title">Rechazo del AT</div>
+                            </div>
+                            <div class="theology-body">
+                                <p>Consideraba que el Antiguo Testamento pertenecía al Dios inferior y debía ser completamente rechazado por los cristianos, incluyendo todas las profecías mesiánicas.</p>
+                            </div>
+                        </div>
+
+                        <div class="theology-card">
+                            <div class="theology-header">
+                                <div class="theology-title">Docetismo Radical</div>
+                            </div>
+                            <div class="theology-body">
+                                <p>Enseñaba que Cristo no era verdaderamente humano, sino que solo aparecía como tal. Su cuerpo era una ilusión, pues la materia era intrínsecamente mala.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card fade-in">
+                    <div class="card-header">
+                        <h2>El Canon de Marción: La Primera Propuesta Formal</h2>
+                    </div>
+                    
+                    <h3>Composición del Canon Marcionita</h3>
+                    <p>Marción compiló el primer canon definido del Nuevo Testamento, que consistía en:</p>
+                    
+                    <div class="canon-comparison">
+                        <div class="canon-column">
+                            <h3>Canon de Marción (144 d.C.)</h3>
+                            <ul class="canon-list">
+                                <li><strong>Evangelion</strong> (Evangelio) - Versión editada de Lucas</li>
+                                <li><strong>Apostolikon</strong> (Apostólico) - 10 cartas de Pablo:
+                                    <ul>
+                                        <li>Gálatas</li>
+                                        <li>1 Corintios</li>
+                                        <li>2 Corintios</li>
+                                        <li>Romanos</li>
+                                        <li>1 Tesalonicenses</li>
+                                        <li>2 Tesalonicenses</li>
+                                        <li>Efesios (llamada Laodicenses)</li>
+                                        <li>Colosenses</li>
+                                        <li>Filemón</li>
+                                        <li>Filipenses</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="canon-column">
+                            <h3>Modificaciones Clave</h3>
+                            <ul class="canon-list">
+                                <li><strong>Eliminación de referencias al AT</strong> - Todas las citas y alusiones al Antiguo Testamento fueron removidas</li>
+                                <li><strong>Texto editado de Lucas</strong> - Removió los primeros dos capítulos (nacimiento e infancia de Jesús)</li>
+                                <li><strong>Cartas paulinas purgadas</strong> - Eliminó secciones que mencionaban al Creador o la ley</li>
+                                <li><strong>Exclusión de otros escritos</strong> - Rechazó Mateo, Marcos, Juan, Hechos, cartas generales y Apocalipsis</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="quote">
+                        "Marción fue el primer hombre en la historia que compiló un 'Nuevo Testamento' como una colección cerrada de escritos sagrados."
+                        <br>- Adolf von Harnack, historiador alemán
+                    </div>
+                </section>
+
+                <section class="card fade-in">
+                    <div class="card-header">
+                        <h2>Respuesta de la Iglesia: Defendiendo la Ortodoxia</h2>
+                    </div>
+                    
+                    <h3>Reacción Inmediata</h3>
+                    <p>La propuesta de Marción provocó una respuesta inmediata y contundente de los líderes cristianos:</p>
+                    
+                    <ul>
+                        <li><strong>Excomunión (144 d.C.):</strong> Marción fue expulsado de la iglesia de Roma</li>
+                        <li><strong>Devolución de fondos:</strong> Su donación anterior le fue devuelta</li>
+                        <li><strong>Expansión misionera:</strong> Marción estableció iglesias rivales por todo el imperio</li>
+                        <li><strong>Respuesta literaria:</strong> Surgió una oleada de escritos contra Marción</li>
+                    </ul>
+                    
+                    <h3>Principales Oponentes</h3>
+                    
+                    <div class="response-grid">
+                        <div class="response-card">
+                            <div class="response-header">
+                                <div class="response-name">Justino Mártir</div>
+                                <div class="response-role">Apologista (c. 100-165 d.C.)</div>
+                            </div>
+                            <div class="response-body">
+                                <p>En su "Primera Apología" (c. 155 d.C.), menciona a Marción como uno de los falsos maestros que seguían las enseñanzas de los demonios.</p>
+                            </div>
+                        </div>
+
+                        <div class="response-card">
+                            <div class="response-header">
+                                <div class="response-name">Ireneo de Lyon</div>
+                                <div class="response-role">Obispo (c. 130-202 d.C.)</div>
+                            </div>
+                            <div class="response-body">
+                                <p>En "Contra las Herejías" (c. 180 d.C.), dedicó un libro completo a refutar a Marción, defendiendo la unidad de las Escrituras.</p>
+                            </div>
+                        </div>
+
+                        <div class="response-card">
+                            <div class="response-header">
+                                <div class="response-name">Tertuliano</div>
+                                <div class="response-role">Teólogo (c. 155-240 d.C.)</div>
+                            </div>
+                            <div class="response-body">
+                                <p>Escribió "Contra Marción" (c. 207-208 d.C.) en cinco volúmenes, la refutación más extensa y sistemática.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="sidebar">
+                <section class="card fade-in">
+                    <div class="card-header">
+                        <h2>Cronología del Desarrollo del Canon</h2>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">30-100 d.C.</div>
+                            <p>Escritura de los documentos del Nuevo Testamento</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">c. 96 d.C.</div>
+                            <p>Clemente de Roma cita extensamente del NT en 1 Clemente</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">c. 115 d.C.</div>
+                            <p>Ignacio de Antioquía muestra conocimiento de múltiples escritos apostólicos</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">144 d.C.</div>
+                            <p><strong>Marción propone el primer canon definido</strong></p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">c. 170 d.C.</div>
+                            <p>El Fragmento Muratoriano lista los libros aceptados</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">c. 180 d.C.</div>
+                            <p>Ireneo de Lyon defiende el cuádruple evangelio</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">367 d.C.</div>
+                            <p>Atanasio enumera los 27 libros del NT en su carta pascual</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card fade-in">
+                    <div class="card-header">
+                        <h2>Criterios de Canonicidad</h2>
+                    </div>
+                    <div class="response-body">
+                        <p>En respuesta a Marción, la iglesia desarrolló criterios para discernir los escritos inspirados:</p>
+                        <ul>
+                            <li><strong>Apostolicidad:</strong> Escrito por un apóstol o asociado cercano</li>
+                            <li><strong>Antigüedad:</strong> Proveniente del período apostólico</li>
+                            <li><strong>Ortodoxia:</strong> Coherencia con la regla de fe apostólica</li>
+                            <li><strong>Uso universal:</strong> Ampliamente aceptado en las iglesias</li>
+                            <li><strong>Inspiración:</strong> Evidencia del Espíritu Santo en el escrito</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <p><strong>Ironía histórica:</strong> Aunque Marción fue condenado como hereje, su propuesta forzó a la iglesia a definir oficialmente qué escrituras consideraba autoritativas, acelerando el proceso de formación del canon.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <section class="consequences-section fade-in">
+            <h2>Consecuencias y Legado del Desafío Marcionita</h2>
+            
+            <h3>Impacto Inmediato (Siglo II)</h3>
+            <p>La propuesta de Marción produjo cambios fundamentales en el cristianismo:</p>
+            
+            <ul>
+                <li><strong>Aceleración del canon:</strong> Forzó a la iglesia a definir rápidamente qué escrituras eran autoritativas</li>
+                <li><strong>Defensa del Antiguo Testamento:</strong> Surgieron numerosas obras defendiendo la continuidad entre los Testamentos</li>
+                <li><strong>Desarrollo de la regla de fe:</strong> Se formalizaron credos y resúmenes de la enseñanza apostólica</li>
+                <li><strong>Énfasis en la ortodoxia:</strong> Se establecieron límites más claros para la enseñanza aceptable</li>
+            </ul>
+            
+            <h3>Legado Duradero</h3>
+            <p>El desafío marcionita dejó un impacto permanente en el cristianismo:</p>
+            
+            <ul>
+                <li><strong>Canon del NT:</strong> Establecimiento definitivo de los 27 libros del Nuevo Testamento</li>
+                <li><strong>Hermenéutica bíblica:</strong> Desarrollo de principios para interpretar la relación entre los Testamentos</li>
+                <li><strong>Estructura eclesiástica:</strong> Fortalecimiento de la autoridad episcopal para defender la ortodoxia</li>
+                <li><strong>Teología trinitaria:</strong> Clarificación de la doctrina de Dios en respuesta al dualismo</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <p><strong>Paradoja histórica:</strong> Marción, intentando purgar el cristianismo de lo que consideraba influencias judaizantes, terminó forzando a la iglesia a afirmar precisamente lo que él quería eliminar: la continuidad con el Antiguo Testamento, la humanidad real de Cristo, y la bondad de la creación material.</p>
+            </div>
+            
+            <div class="quote">
+                "Toda la Escritura es inspirada por Dios, y útil para enseñar, para redargüir, para corregir, para instruir en justicia, a fin de que el hombre de Dios sea perfecto, enteramente preparado para toda buena obra."
+                <br>- 2 Timoteo 3:16-17 (texto que Marción habría eliminado)
+            </div>
+        </section>
+
+        <section class="card fade-in">
+            <div class="card-header">
+                <h2>Marcionismo Moderno y Relevancia Contemporánea</h2>
+            </div>
+            
+            <h3>Ecos del Marcionismo en la Actualidad</h3>
+            <p>Aunque el marcionismo como movimiento organizado desapareció alrededor del siglo V, sus ideas continúan reapareciendo en formas modernas:</p>
+            
+            <ul>
+                <li><strong>Devaluación del AT:</strong> Tendencia a ignorar o espiritualizar en exceso el Antiguo Testamento</li>
+                <li><strong>Dualismo práctico:</strong> Separación entre "espiritual" y "material" en la ética cristiana</li>
+                <li><strong>Cristología docetista:</strong> Énfasis desequilibrado en la divinidad de Cristo minimizando su humanidad</li>
+                <li><strong>Antinomianismo:</strong> Rechazo de cualquier norma moral como "legalismo"</li>
+            </ul>
+            
+            <h3>Lecciones para la Iglesia Contemporánea</h3>
+            <p>El episodio marcionita ofrece lecciones importantes:</p>
+            
+            <ol>
+                <li><strong>Importancia del canon:</strong> La necesidad de definir claramente las fuentes de autoridad</li>
+                <li><strong>Unidad bíblica:</strong> El Antiguo y Nuevo Testamento forman una narrativa coherente de redención</li>
+                <li><strong>Encarnación real:</strong> La salvación depende de que Cristo fuera verdaderamente humano</li>
+                <li><strong>Respuesta proporcional:</strong> La importancia de responder a los desafíos teológicos con claridad y firmeza</li>
+            </ol>
+            
+            <div class="highlight-box">
+                <p><strong>Reflexión final:</strong> El desafío de Marción, aunque herético, sirvió como catalizador divino para que la iglesia definiera y defendiera el canon de las Escrituras. Su legado nos recuerda la importancia de mantener la integridad del mensaje bíblico completo contra cualquier intento de mutilarlo o distorsionarlo.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Estudio Histórico - Marción y su Canon (144 d.C.)</p>
+            <p>Basado en escritos patrísticos y análisis histórico-teológico</p>
+        </footer>
+    </div>
+
+    <script>
+        // Efecto de aparición de elementos al hacer scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const checkFade = function() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkFade);
+        window.addEventListener('load', checkFade);
+    </script>
+</body>
+  </html>
