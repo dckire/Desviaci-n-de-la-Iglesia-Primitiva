@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concilio de Roma (382 d.C.) - Canon Bíblico y Afirmación de la Primacía Romana</title>
+    <style>
+        :root {
+            --color-primary: #5D4037;
+            --color-secondary: #8D6E63;
+            --color-accent: #BF360C;
+            --color-gold: #D4AF37;
+            --color-light: #F5F5DC;
+            --color-dark: #3E2723;
+            --color-text: #333;
+            --color-white: #FFFFFF;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            --shadow-heavy: 0 8px 30px rgba(0, 0, 0, 0.25);
+            --transition: all 0.3s ease;
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--color-light);
+            color: var(--color-text);
+            line-height: 1.6;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238D6E63' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            color: var(--color-white);
+            padding: 2rem;
+            text-align: center;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-heavy);
+            border-bottom: 5px solid var(--color-gold);
+        }
+
+        h1 {
+            font-family: 'Times New Roman', serif;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--color-gold);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--color-light);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--color-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .card-header {
+            border-bottom: 3px solid var(--color-gold);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--color-accent);
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: linear-gradient(to right, rgba(191, 54, 12, 0.1) 0%, rgba(255, 255, 255, 0.5) 100%);
+            border-left: 5px solid var(--color-accent);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .warning-box {
+            background: linear-gradient(to right, rgba(191, 54, 12, 0.15) 0%, rgba(255, 255, 255, 0.5) 100%);
+            border-left: 5px solid var(--color-accent);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            border: 2px solid var(--color-accent);
+        }
+
+        .quote {
+            font-style: italic;
+            color: var(--color-dark);
+            border-left: 4px solid var(--color-gold);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .figure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .figure-card {
+            background-color: var(--color-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .figure-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .figure-header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            color: var(--color-white);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .figure-name {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .figure-role {
+            font-size: 1rem;
+            color: var(--color-secondary);
+        }
+
+        .figure-body {
+            padding: 1.5rem;
+        }
+
+        .comparison-section {
+            background-color: var(--color-white);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .comparison-column h3 {
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--color-gold);
+        }
+
+        .comparison-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--color-secondary);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--color-gold);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 10px;
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: var(--color-accent);
+            border: 3px solid var(--color-gold);
+            border-radius: 50%;
+            left: -10px;
+            top: 5px;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .consequences-section {
+            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
+            color: var(--color-white);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            margin-top: 3rem;
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .consequences-section h2 {
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            color: var(--color-dark);
+            border-top: 1px solid var(--color-secondary);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .canon-container {
+            background: var(--color-white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin: 1.5rem 0;
+        }
+
+        .canon-lists {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .canon-lists {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .canon-column h4 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--color-gold);
+        }
+
+        .canon-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .scripture-box {
+            background: var(--color-white);
+            border: 2px solid var(--color-gold);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        .scripture-title {
+            color: var(--color-primary);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .primacy-section {
+            background: var(--color-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-gold);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Concilio de Roma (382 d.C.)</h1>
+            <p class="subtitle">Cuando Roma Definía las Escrituras: Canon Bíblico y Afirmación de la Primacía Romana</p>
+        </header>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <section class="card fade-in">
+                    <div class="card-header">
+                        <h2>Contexto Histórico del Concilio</h2>
+                    </div>
+                    
+                    <h3>La Búsqueda de Autoridad en Tiempos de Cambio</h3>
+                    <p>A finales del siglo IV, el Imperio Romano se encontraba en un período de transformación religiosa y política. Tras el Edicto de Tesalónica (380 d.C.), el cristianismo niceno se había convertido en la religión oficial, pero persistían disputas sobre el canon bíblico y la autoridad eclesial.</p>
+                    
+                    <div class="warning-box">
+                        <p><strong>Problema fundamental:</strong> Por primera vez, un concilio romano afirmaba explícitamente la primacía de la sede de Roma basándose en una interpretación específica de Mateo 16:18, estableciendo un precedente crucial para el desarrollo del papado.</p>
+                    </div>
+                    
+                    <h3>Antecedentes del Concilio</h3>
+                    <ul>
+                        <li><strong>Disputas canónicas:</strong> Diferentes regiones usaban distintos cánones bíblicos</li>
+                        <li><strong>Influencia de Jerónimo:</strong> El secretario de Dámaso trabajaba en la Vulgata latina</li>
+                        <li><strong>Competencia con Constantinopla:</strong> El Concilio de Constantinopla (381) había elevado el estatus de esa sede</li>
+                        <li><strong>Necesidad de uniformidad:</strong> El estado cristiano requería un canon unificado</li>
+                    </ul>
+                </section>
+
+                <section class="card fade-in">
+                    <div class="card-header">
+                        <h2>Dámaso I: El Obispo que Consolidó el Poder Romano</h2>
+                    </div>
+                    
+                    <h3>El Concilio bajo Dámaso I</h3>
+                    <p>Dámaso I, obispo de Roma desde 366 hasta 384 d.C., convocó el concilio en 382 d.C. como respuesta a varias necesidades urgentes de la iglesia occidental. Su pontificado estuvo marcado por conflictos internos y esfuerzos por afirmar la autoridad romana.</p>
+                    
+                    <div class="figure-grid">
+                        <div class="figure-card">
+                            <div class="figure-header">
+                                <div class="figure-name">Dámaso I</div>
+                                <div class="figure-role">Obispo de Roma (366-384 d.C.)</div>
+                            </div>
+                            <div class="figure-body">
+                                <p>Conocido por su firme defensa de la primacía romana, patrocinó la Vulgata de Jerónimo y enfrentó acusaciones de violencia durante su elección.</p>
+                            </div>
+                        </div>
+
+                        <div class="figure-card">
+                            <div class="figure-header">
+                                <div class="figure-name">Jerónimo de Estridón</div>
+                                <div class="figure-role">Secretario y Traductor</div>
+                            </div>
+                            <div class="figure-body">
+                                <p>Secretario de Dámaso, encargado de producir la Vulgata latina. Su trabajo fue fundamental para establecer el canon occidental.</p>
+                            </div>
+                        </div>
+
+                        <div class="figure-card">
+                            <div class="figure-header">
+                                <div class="figure-name">Ambrosio de Milán</div>
+                                <div class="figure-role">Obispo de Milán</div>
+                            </div>
+                            <div class="figure-body">
+                                <p>Influyente obispo que a veces rivalizaba con la autoridad romana, pero cuyas acciones contra herejías reforzaron la ortodoxia nicena.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3>Decisiones Clave del Concilio</h3>
+                    <p>El concilio tomó decisiones fundamentales que moldearían el cristianismo occidental:</p>
+                    
+                    <ol>
+                        <li><strong>Canon de 73 libros:</strong> Establecimiento oficial del canon bíblico incluyendo los deuterocanónicos</li>
+                        <li><strong>Primacía romana:</strong> Afirmación explícita de la autoridad de la sede de Roma</li>
+                        <li><strong>Condena de apócrifos:</strong> Delimitación clara de libros aceptados y rechazados</li>
+                        <li><strong>Uniformidad litúrgica:</strong> Establecimiento de prácticas comunes para Occidente</li>
+                    </ol>
+                </section>
+
+                <section class="card fade-in">
+                    <div class="card-header">
+                        <h2>El Canon Bíblico y la Cuestión de la Autoridad</h2>
+                    </div>
+                    
+                    <h3>El Canon de 73 Libros</h3>
+                    
+                    <div class="canon-container">
+                        <h3>Canon Bíblico Establecido en el Concilio de Roma</h3>
+                        <div class="canon-lists">
+                            <div class="canon-column">
+                                <h4>Antiguo Testamento (46 libros)</h4>
+                                <div class="canon-item">Génesis</div>
+                                <div class="canon-item">Éxodo</div>
+                                <div class="canon-item">Levítico</div>
+                                <div class="canon-item">Números</div>
+                                <div class="canon-item">Deuteronomio</div>
+                                <div class="canon-item">Josué</div>
+                                <div class="canon-item">Jueces</div>
+                                <div class="canon-item">Rut</div>
+                                <div class="canon-item">1-2 Samuel</div>
+                                <div class="canon-item">1-2 Reyes</div>
+                                <div class="canon-item">1-2 Crónicas</div>
+                                <div class="canon-item">Esdras</div>
+                                <div class="canon-item">Nehemías</div>
+                                <div class="canon-item">Tobías</div>
+                                <div class="canon-item">Judit</div>
+                                <div class="canon-item">Ester</div>
+                                <div class="canon-item">1-2 Macabeos</div>
+                                <div class="canon-item">Job</div>
+                                <div class="canon-item">Salmos</div>
+                                <div class="canon-item">Proverbios</div>
+                                <div class="canon-item">Eclesiastés</div>
+                                <div class="canon-item">Cantar de los Cantares</div>
+                                <div class="canon-item">Sabiduría</div>
+                                <div class="canon-item">Eclesiástico</div>
+                                <div class="canon-item">Isaías</div>
+                                <div class="canon-item">Jeremías</div>
+                                <div class="canon-item">Lamentaciones</div>
+                                <div class="canon-item">Baruc</div>
+                                <div class="canon-item">Ezequiel</div>
+                                <div class="canon-item">Daniel</div>
+                                <div class="canon-item">Oseas</div>
+                                <div class="canon-item">Joel</div>
+                                <div class="canon-item">Amós</div>
+                                <div class="canon-item">Abdías</div>
+                                <div class="canon-item">Jonás</div>
+                                <div class="canon-item">Miqueas</div>
+                                <div class="canon-item">Nahúm</div>
+                                <div class="canon-item">Habacuc</div>
+                                <div class="canon-item">Sofonías</div>
+                                <div class="canon-item">Hageo</div>
+                                <div class="canon-item">Zacarías</div>
+                                <div class="canon-item">Malaquías</div>
+                            </div>
+                            <div class="canon-column">
+                                <h4>Nuevo Testamento (27 libros)</h4>
+                                <div class="canon-item">Mateo</div>
+                                <div class="canon-item">Marcos</div>
+                                <div class="canon-item">Lucas</div>
+                                <div class="canon-item">Juan</div>
+                                <div class="canon-item">Hechos</div>
+                                <div class="canon-item">Romanos</div>
+                                <div class="canon-item">1-2 Corintios</div>
+                                <div class="canon-item">Gálatas</div>
+                                <div class="canon-item">Efesios</div>
+                                <div class="canon-item">Filipenses</div>
+                                <div class="canon-item">Colosenses</div>
+                                <div class="canon-item">1-2 Tesalonicenses</div>
+                                <div class="canon-item">1-2 Timoteo</div>
+                                <div class="canon-item">Tito</div>
+                                <div class="canon-item">Filemón</div>
+                                <div class="canon-item">Hebreos</div>
+                                <div class="canon-item">Santiago</div>
+                                <div class="canon-item">1-2 Pedro</div>
+                                <div class="canon-item">1-3 Juan</div>
+                                <div class="canon-item">Judas</div>
+                                <div class="canon-item">Apocalipsis</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-section">
+                        <div class="comparison-grid">
+                            <div class="comparison-column">
+                                <h3>Canon Hebreo (Protestante)</h3>
+                                <div class="comparison-item">
+                                    <p><strong>Número de libros:</strong> 66 libros (39 AT + 27 NT)</p>
+                                </div>
+                                <div class="comparison-item">
+                                    <p><strong>Deuterocanónicos:</strong> Excluidos como apócrifos</p>
+                                </div>
+                                <div class="comparison-item">
+                                    <p><strong>Base:</strong> Canon palestino judío</p>
+                                </div>
+                                <div class="comparison-item">
+                                    <p><strong>Desarrollo:</strong> Definido posteriormente en la Reforma</p>
+                                </div>
+                            </div>
+                            <div class="comparison-column">
+                                <h3>Canon de Roma (382 d.C.)</h3>
+                                <div class="comparison-item">
+                                    <p><strong>Número de libros:</strong> 73 libros (46 AT + 27 NT)</p>
+                                </div>
+                                <div class="comparison-item">
+                                    <p><strong>Deuterocanónicos:</strong> Incluidos como canónicos</p>
+                                </div>
+                                <div class="comparison-item">
+                                    <p><strong>Base:</strong> Septuaginta griega y tradición occidental</p>
+                                </div>
+                                <div class="comparison-item">
+                                    <p><strong>Desarrollo:</strong> Primer listado oficial en Occidente</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="primacy-section">
+                        <h3>La Afirmación de la Primacía Romana</h3>
+                        <p>El concilio afirmó explícitamente la autoridad de la sede romana basándose en Mateo 16:18-19:</p>
+                        
+                        <div class="scripture-box">
+                            <div class="scripture-title">Mateo 16:18-19</div>
+                            <p>"Y yo también te digo, que tú eres Pedro, y sobre esta roca edificaré mi iglesia; y las puertas del Hades no prevalecerán contra ella. Y a ti te daré las llaves del reino de los cielos; y todo lo que atares en la tierra será atado en los cielos; y todo lo que desatares en la tierra será desatado en los cielos."</p>
+                        </div>
+                        
+                        <div class="warning-box">
+                            <p><strong>Interpretación controvertida:</strong> Por primera vez un concilio occidental utilizaba este texto para afirmar la primacía jurisdiccional de Roma sobre otras iglesias, estableciendo un precedente que sería desarrollado posteriormente en el dogma de la infalibilidad papal.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="sidebar">
+                <section class="card fade-in">
+                    <div class="card-header">
+                        <h2>Cronología del Desarrollo Canónico</h2>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">c. 250-200 a.C.</div>
+                            <p>Traducción de la Septuaginta griega que incluye libros deuterocanónicos</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">c. 90-100 d.C.</div>
+                            <p>Concilio de Jamnia establece el canon hebreo, excluyendo deuterocanónicos</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">367 d.C.</div>
+                            <p>Atanasio de Alejandría lista el canon de 27 libros del NT en su carta festal</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">382 d.C.</div>
+                            <p><strong>Concilio de Roma:</strong> Primer listado oficial occidental del canon completo</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">397 d.C.</div>
+                            <p>Concilio de Cartago confirma el canon de 73 libros para África</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">1546 d.C.</div>
+                            <p>Concilio de Trento define dogmáticamente el canon de 73 libros</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card fade-in">
+                    <div class="card-header">
+                        <h2>Documentos y Fuentes Clave</h2>
+                    </div>
+                    <div class="figure-body">
+                        <p><strong>Fuentes principales:</strong></p>
+                        <ul>
+                            <li><strong>Decreto de Dámaso</strong> (preservado en colecciones posteriores)</li>
+                            <li><strong>Cartas de Jerónimo</strong> sobre su trabajo de traducción</li>
+                            <li><strong>Documentos sinodales</strong> del Concilio de Roma</li>
+                            <li><strong>Crónicas eclesiásticas</strong> del siglo V</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <p><strong>Importancia histórica:</strong> Este concilio representa un momento crucial en la centralización de la autoridad eclesial en Roma y la estandarización del canon bíblico en Occidente.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <section class="consequences-section fade-in">
+            <h2>Consecuencias y Legado del Concilio</h2>
+            
+            <h3>Impacto Inmediato</h3>
+            <p>Las decisiones del Concilio de Roma tuvieron repercusiones significativas:</p>
+            
+            <ul>
+                <li><strong>Uniformidad occidental:</strong> Estableció un canon unificado para las iglesias de Occidente</li>
+                <li><strong>Afirmación de autoridad:</strong> Fortaleció la posición de Roma como árbitro doctrinal</li>
+                <li><strong>Trabajo de Jerónimo:</strong> Proporcionó la base canónica para la Vulgata latina</li>
+                <li><strong>Divergencia oriental:</strong> Marcó diferencias crecientes con el cristianismo griego</li>
+            </ul>
+            
+            <h3>Legado a Largo Plazo</h3>
+            <p>El concilio dejó un impacto duradero en el desarrollo del cristianismo:</p>
+            
+            <ul>
+                <li><strong>Desarrollo papal:</strong> Sentó bases para futuras afirmaciones de primacía romana</li>
+                <li><strong>Canon católico:</strong> Estableció el canon que sería definido dogmáticamente en Trento</li>
+                <li><strong>Centralización romana:</strong> Inició el proceso de centralización doctrinal en la sede romana</li>
+                <li><strong>División protestante:</strong> Creó una diferencia canónica que sería crucial en la Reforma</li>
+            </ul>
+            
+            <div class="warning-box">
+                <p><strong>Evaluación histórica:</strong> Aunque el Concilio de Roma proporcionó una necesaria uniformidad canónica para Occidente, también representó un paso significativo en la concentración de autoridad doctrinal en la sede romana, estableciendo precedentes que llevarían a mayores tensiones entre las iglesias orientales y occidentales y que culminarían en el Gran Cisma de 1054.</p>
+            </div>
+            
+            <div class="quote">
+                "La santa Iglesia Romana no ha sido colocada en dignidad por ninguna synodal constitucion, sino que ha recibido la primacía por la voz evangelica de nuestro Señor y Salvador."
+                <br>- Decreto de Dámaso, Concilio de Roma (382 d.C.)
+            </div>
+        </section>
+
+        <section class="card fade-in">
+            <div class="card-header">
+                <h2>Significado Teológico y Eclesiológico</h2>
+            </div>
+            
+            <h3>Cuestiones Fundamentales Planteadas</h3>
+            <p>El Concilio de Roma planteó tensiones importantes en la autocomprensión de la iglesia:</p>
+            
+            <ul>
+                <li><strong>Autoridad vs. Tradición:</strong> ¿Quién tiene la autoridad para definir el canon bíblico?</li>
+                <li><strong>Unidad vs. Diversidad:</strong> ¿Es necesaria la uniformidad canónica para la unidad cristiana?</li>
+                <li><strong>Roma como árbitro:</strong> ¿Tiene Roma autoridad para imponer un canon a otras iglesias?</li>
+                <li><strong>Desarrollo doctrinal:</strong> ¿Cómo se relaciona la decisión conciliar con la inspiración divina?</li>
+            </ul>
+            
+            <h3>Lecciones para la Iglesia Contemporánea</h3>
+            <p>Este episodio histórico ofrece perspectivas relevantes hoy:</p>
+            
+            <ol>
+                <li><strong>Proceso de canonización:</strong> El canon se desarrolló históricamente, no fue entregado completo</li>
+                <li><strong>Importancia de la tradición:</strong> Las decisiones sobre el canon involucraron discernimiento comunitario</li>
+                <li><strong>Peligro del centralismo:</strong> La concentración de autoridad puede crear tensiones eclesiales</li>
+                <li><strong>Diálogo ecuménico:</strong> Las diferencias canónicas requieren respeto y comprensión mutua</li>
+            </ol>
+            
+            <div class="highlight-box">
+                <p><strong>Reflexión final:</strong> El Concilio de Roma de 382 d.C. representa un momento crucial en la historia del cristianismo occidental, donde por primera vez se estableció oficialmente un canon bíblico unificado y se afirmó explícitamente la primacía romana basándose en Mateo 16:18. Aunque estas decisiones proporcionaron estabilidad y uniformidad, también establecieron patrones de autoridad que continuarían desarrollándose y que contribuirían a las divisiones posteriores dentro del cristianismo.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Estudio Histórico - Concilio de Roma (382 d.C.)</p>
+            <p>Basado en documentos históricos y análisis eclesiológico</p>
+        </footer>
+    </div>
+
+    <script>
+        // Efecto de aparición de elementos al hacer scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const checkFade = function() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkFade);
+        window.addEventListener('load', checkFade);
+    </script>
+</body>
+</html>
