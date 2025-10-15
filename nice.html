@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concilio de Nicea (325 d.C.) - Intervención Estatal en la Doctrina Cristiana</title>
+    <style>
+        :root {
+            --color-primary: #3E2723;
+            --color-secondary: #5D4037;
+            --color-accent: #BF360C;
+            --color-gold: #D4AF37;
+            --color-light: #F5F5DC;
+            --color-dark: #1B0F0B;
+            --color-text: #333;
+            --color-white: #FFFFFF;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            --shadow-heavy: 0 8px 30px rgba(0, 0, 0, 0.25);
+            --transition: all 0.3s ease;
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--color-light);
+            color: var(--color-text);
+            line-height: 1.6;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%235D4037' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            color: var(--color-white);
+            padding: 2rem;
+            text-align: center;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-heavy);
+            border-bottom: 5px solid var(--color-gold);
+        }
+
+        h1 {
+            font-family: 'Times New Roman', serif;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--color-gold);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--color-light);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--color-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .card-header {
+            border-bottom: 3px solid var(--color-gold);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--color-accent);
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: linear-gradient(to right, rgba(191, 54, 12, 0.1) 0%, rgba(255, 255, 255, 0.5) 100%);
+            border-left: 5px solid var(--color-accent);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .warning-box {
+            background: linear-gradient(to right, rgba(191, 54, 12, 0.15) 0%, rgba(255, 255, 255, 0.5) 100%);
+            border-left: 5px solid var(--color-accent);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            border: 2px solid var(--color-accent);
+        }
+
+        .quote {
+            font-style: italic;
+            color: var(--color-dark);
+            border-left: 4px solid var(--color-gold);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .figure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .figure-card {
+            background-color: var(--color-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .figure-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .figure-header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            color: var(--color-white);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .figure-name {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .figure-role {
+            font-size: 1rem;
+            color: var(--color-secondary);
+        }
+
+        .figure-body {
+            padding: 1.5rem;
+        }
+
+        .comparison-section {
+            background-color: var(--color-white);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .comparison-column h3 {
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--color-gold);
+        }
+
+        .comparison-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--color-secondary);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--color-gold);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 10px;
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: var(--color-accent);
+            border: 3px solid var(--color-gold);
+            border-radius: 50%;
+            left: -10px;
+            top: 5px;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .consequences-section {
+            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
+            color: var(--color-white);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            margin-top: 3rem;
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .consequences-section h2 {
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            color: var(--color-dark);
+            border-top: 1px solid var(--color-secondary);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .map-container {
+            background: var(--color-white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin: 1.5rem 0;
+        }
+
+        .map-regions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .region {
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .region.orthodox {
+            background: rgba(191, 54, 12, 0.2);
+            border: 2px solid var(--color-accent);
+        }
+
+        .region.arian {
+            background: rgba(93, 64, 55, 0.2);
+            border: 2px solid var(--color-primary);
+        }
+
+        .region.other {
+            background: rgba(141, 110, 99, 0.2);
+            border: 2px solid var(--color-secondary);
+        }
+
+        .doctrine-box {
+            background: var(--color-white);
+            border: 2px solid var(--color-gold);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        .doctrine-title {
+            color: var(--color-primary);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Concilio de Nicea (325 d.C.)</h1>
+            <p class="subtitle">Cuando el Estado Definía la Fe: El Inicio de la Intervención Imperial en la Doctrina Cristiana</p>
+        </header>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <section class="card fade-in">
+                    <div class="card-header">
+                        <h2>Contexto Histórico del Concilio</h2>
+                    </div>
+                    
+                    <h3>La Crisis Arriana y la Intervención Imperial</h3>
+                    <p>A principios del siglo IV, la controversia arriana sobre la naturaleza de Cristo dividía a la iglesia. Arrio, presbítero de Alejandría, enseñaba que el Hijo era una criatura creada por el Padre y por tanto no era coeterno con Él.</p>
+                    
+                    <div class="warning-box">
+                        <p><strong>Problema fundamental:</strong> Por primera vez en la historia, un emperador no cristiano (Constantino) convocaba y presidía un concilio eclesial para resolver disputas doctrinales, estableciendo un peligroso precedente de intervención estatal en asuntos de fe.</p>
+                    </div>
+                    
+                    <h3>Motivaciones de Constantino</h3>
+                    <ul>
+                        <li><strong>Unidad imperial:</strong> Buscaba la cohesión religiosa como base para la estabilidad política</li>
+                        <li><strong>Control eclesial:</strong> Pretendía dirigir y administrar la iglesia como una institución más del estado</li>
+                        <li><strong>Legitimación divina:</strong> Utilizaba el cristianismo para fortalecer su autoridad como emperador</li>
+                        <li><strong>Pragmatismo político:</strong> Veía las divisiones teológicas como amenazas al orden público</li>
+                    </ul>
+                </section>
+
+                <section class="card fade-in">
+                    <div class="card-header">
+                        <h2>Constantino: Emperador y Teólogo Imperial</h2>
+                    </div>
+                    
+                    <h3>El Primer Concilio Ecuménico</h3>
+                    <p>Constantino convocó el concilio en Nicea (actual İznik, Turquía) en 325 d.C., reuniendo aproximadamente 300 obispos de todo el imperio. El emperador, que aún no estaba bautizado, presidió las sesiones y ejerció influencia decisiva en las decisiones.</p>
+                    
+                    <div class="figure-grid">
+                        <div class="figure-card">
+                            <div class="figure-header">
+                                <div class="figure-name">Constantino I</div>
+                                <div class="figure-role">Emperador Romano</div>
+                            </div>
+                            <div class="figure-body">
+                                <p>Convocó y presidió el concilio sin ser cristiano bautizado, estableciendo el precedente de intervención estatal en doctrina eclesial.</p>
+                            </div>
+                        </div>
+
+                        <div class="figure-card">
+                            <div class="figure-header">
+                                <div class="figure-name">Arrio</div>
+                                <div class="figure-role">Presbítero de Alejandría</div>
+                            </div>
+                            <div class="figure-body">
+                                <p>Defendía que el Hijo era la primera creación del Padre, no coeterno ni consustancial con Él. Condenado y exiliado por el concilio.</p>
+                            </div>
+                        </div>
+
+                        <div class="figure-card">
+                            <div class="figure-header">
+                                <div class="figure-name">Atanasio de Alejandría</div>
+                                <div class="figure-role">Diácono y Teólogo</div>
+                            </div>
+                            <div class="figure-body">
+                                <p>Principal opositor de Arrio, defendió la divinidad plena de Cristo. Su postura prevaleció en el concilio pero fue exiliado múltiples veces después.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3>El Desarrollo del Concilio</h3>
+                    <p>El concilio se desarrolló bajo la sombra del poder imperial:</p>
+                    
+                    <ol>
+                        <li><strong>Convocatoria imperial:</strong> Constantino citó a los obispos pagando todos sus gastos</li>
+                        <li><strong>Presidencia secular:</strong> El emperador, no bautizado, dirigía las discusiones teológicas</li>
+                        <strong>Presión política:</strong> Se amenazó con exilio a quienes no aceptaran el credo oficial</li>
+                        <li><strong>Imposición terminológica:</strong> Se adoptó el término filosófico "homoousios" (consustancial) por influencia imperial</li>
+                    </ol>
+                </section>
+
+                <section class="card fade-in">
+                    <div class="card-header">
+                        <h2>Doctrina y Controversia en Nicea</h2>
+                    </div>
+                    
+                    <h3>El Credo Niceno</h3>
+                    
+                    <div class="doctrine-box">
+                        <div class="doctrine-title">Principales Definiciones Doctrinales</div>
+                        <p><strong>Homoousios:</strong> El Hijo es "consustancial" con el Padre, de la misma naturaleza divina</p>
+                        <p><strong>Condena del arrianismo:</strong> Se declaró herética la posición de que el Hijo era una criatura</p>
+                        <p><strong>Fórmula trinitaria:</strong> Se estableció la doctrina de la Trinidad de forma más explícita</p>
+                    </div>
+                    
+                    <div class="comparison-section">
+                        <div class="comparison-grid">
+                            <div class="comparison-column">
+                                <h3>Posición Ortodoxa (Nicena)</h3>
+                                <div class="comparison-item">
+                                    <p><strong>Cristología:</strong> Hijo consustancial (homoousios) con el Padre</p>
+                                </div>
+                                <div class="comparison-item">
+                                    <p><strong>Naturaleza divina:</strong> El Hijo es verdadero Dios de verdadero Dios</p>
+                                </div>
+                                <div class="comparison-item">
+                                    <p><strong>Eternidad:</strong> El Hijo es coeterno con el Padre, no creado</p>
+                                </div>
+                                <div class="comparison-item">
+                                    <p><strong>Apoyo:</strong> Mayoría de obispos, respaldada por el emperador</p>
+                                </div>
+                            </div>
+                            <div class="comparison-column">
+                                <h3>Posición Arriana</h3>
+                                <div class="comparison-item">
+                                    <p><strong>Cristología:</strong> Hijo de naturaleza similar (homoiousios) al Padre</p>
+                                </div>
+                                <div class="comparison-item">
+                                    <p><strong>Naturaleza divina:</strong> El Hijo es la primera creación del Padre</p>
+                                </div>
+                                <div class="comparison-item">
+                                    <p><strong>Eternidad:</strong> "Hubo un tiempo cuando el Hijo no existía"</p>
+                                </div>
+                                <div class="comparison-item">
+                                    <p><strong>Apoyo:</strong> Minoría significativa, incluyendo obispos influyentes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <h3>División Geográfica de la Controversia</h3>
+                        <div class="map-regions">
+                            <div class="region orthodox">
+                                Alejandría, Roma, Occidente<br>
+                                (Posición Nicena)
+                            </div>
+                            <div class="region arian">
+                                Oriente, Palestina, Nicomedia<br>
+                                (Influencia Arriana)
+                            </div>
+                            <div class="region other">
+                                Otras Regiones<br>
+                                (Divididas o indecisas)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quote">
+                        "El obispo debe juzgar a los sacerdotes, pero el emperador debe juzgar a los obispos."
+                        <br>- Constantino, según Eusebio de Cesarea
+                    </div>
+                </section>
+            </div>
+
+            <div class="sidebar">
+                <section class="card fade-in">
+                    <div class="card-header">
+                        <h2>Cronología del Concilio y sus Consecuencias</h2>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">318 d.C.</div>
+                            <p>Arrio comienza a enseñar su doctrina en Alejandría, generando controversia</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">324 d.C.</div>
+                            <p>Constantino unifica el Imperio y se enfrenta a la división eclesial</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">325 d.C.</div>
+                            <p><strong>Concilio de Nicea:</strong> Constantino convoca y preside el primer concilio ecuménico</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">328-335 d.C.</div>
+                            <p>Rehabilitación parcial de arrianos y exilio de Atanasio</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">337 d.C.</div>
+                            <p>Muerte de Constantino, bautizado en su lecho de muerte por un obispo arriano</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">381 d.C.</div>
+                            <p>Concilio de Constantinopla reafirma el credo niceno</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card fade-in">
+                    <div class="card-header">
+                        <h2>Documentos y Fuentes Clave</h2>
+                    </div>
+                    <div class="figure-body">
+                        <p><strong>Fuentes principales:</strong></p>
+                        <ul>
+                            <li><strong>Vita Constantini</strong> de Eusebio de Cesarea</li>
+                            <li><strong>Cartas Sinodales</strong> del Concilio de Nicea</li>
+                            <li><strong>Credo Niceno</strong> original</li>
+                            <li><strong>Historia Arrianorum</strong> de Atanasio</li>
+                        </ul>
+                        <div class="warning-box">
+                            <p><strong>Problema histórico:</strong> Las principales fuentes provienen de participantes con intereses particulares, dificultando una reconstrucción objetiva de los eventos.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <section class="consequences-section fade-in">
+            <h2>Consecuencias Negativas para la Iglesia Primitiva</h2>
+            
+            <h3>Problemas Inmediatos</h3>
+            <p>El Concilio de Nicea generó más conflictos de los que resolvió:</p>
+            
+            <ul>
+                <li><strong>Persecución estatal de disidentes:</strong> Por primera vez, el estado perseguía a cristianos por sus creencias teológicas</li>
+                <li><strong>Politización de la teología:</strong> Las decisiones doctrinales se convirtieron en herramientas de poder político</li>
+                <li><strong>Exilios y divisiones:</strong> Obispos fueron exiliados y las iglesias se dividieron según líneas políticas</li>
+                <li><strong>Imposición terminológica:</strong> Términos filosóficos no bíblicos se volvieron pruebas de ortodoxia</li>
+            </ul>
+            
+            <h3>Legado Problemático</h3>
+            <p>El concilio estableció patrones dañinos que persistirían durante siglos:</p>
+            
+            <ul>
+                <li><strong>Cesaro-papismo:</strong> Precedente de control estatal sobre la iglesia</li>
+                <li><strong>Doctrina por decreto:</strong> La verdad teológica determinada por votación y coerción</li>
+                <li><strong>Herejía como crimen político:</strong> La disidencia teológica se convirtió en delito civil</li>
+                <li><strong>Helenización del cristianismo:</strong> Adopción de categorías filosóficas griegas como norma doctrinal</li>
+            </ul>
+            
+            <div class="warning-box">
+                <p><strong>Evaluación crítica:</strong> Aunque Nicea afirmó verdades bíblicas importantes, el método establecido -intervención estatal, coerción política y definición de doctrina por concilio imperial- representó una desviación radical del modelo neotestamentario de iglesia y sentó las bases para siglos de persecución intraeclesial.</p>
+            </div>
+            
+            <div class="quote">
+                "Cuando Constantino intervino en la controversia arriana, transformó fundamentalmente la naturaleza del cristianismo. La fe que había sobrevivido a la persecución ahora enfrentaba el peligro mayor: el favor del estado."
+                <br>- Análisis histórico contemporáneo
+            </div>
+        </section>
+
+        <section class="card fade-in">
+            <div class="card-header">
+                <h2>Lecciones para la Iglesia Contemporánea</h2>
+            </div>
+            
+            <h3>Advertencias del Modelo Niceno</h3>
+            <p>El Concilio de Nicea ofrece lecciones cruciales sobre los peligros de mezclar poder político y religioso:</p>
+            
+            <ul>
+                <li><strong>Autonomía eclesial:</strong> La iglesia debe mantener independencia del poder estatal</li>
+                <li><strong>Peligro del poder:</strong> El respaldo estatal corrompe la pureza del mensaje evangélico</li>
+                <li><strong>Unidad orgánica vs. uniformidad impuesta:</strong> La verdadera unidad nace del Espíritu, no de decretos imperiales</li>
+                <li><strong>Diversidad teológica:</strong> Las diferencias legítimas pueden coexistir sin necesidad de uniformidad coercitiva</li>
+            </ul>
+            
+            <h3>Alternativas Históricas</h3>
+            <p>Existían modelos diferentes al adoptado en Nicea:</p>
+            
+            <ol>
+                <li><strong>Modelo apostólico:</strong> Resolución de conflictos mediante consenso y testimonio, no coerción</li>
+                <li><strong>Tolerancia práctica:</strong> Convivencia de diferentes interpretaciones dentro de la comunión</li>
+                <li><strong>Autoridad moral vs. política:</strong> Influencia mediante persuasión, no mediante poder estatal</li>
+                <li><strong>Libertad de conciencia:</strong> Respeto por la autonomía de las comunidades locales</li>
+            </ol>
+            
+            <div class="warning-box">
+                <p><strong>Reflexión final:</strong> El Concilio de Nicea representa un momento crucial donde la iglesia, recién salida de las catacumbas, aceptó el abrazo del estado romano. Este "abrazo" resultaría ser sofocante, transformando la fe perseguida en religión imperial y estableciendo patrones de control estatal que desnaturalizarían el cristianismo primitivo. La lección perdurable es que cuando César define la fe, la fe inevitablemente se convierte en sirviente de César.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Estudio Histórico - Concilio de Nicea (325 d.C.)</p>
+            <p>Análisis crítico basado en fuentes históricas primarias</p>
+        </footer>
+    </div>
+
+    <script>
+        // Efecto de aparición de elementos al hacer scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const checkFade = function() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkFade);
+        window.addEventListener('load', checkFade);
+    </script>
+</body>
+</html>
