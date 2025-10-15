@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Smith | Misionero y Mentor de Ernest William Sellers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --secondary: #34495E;
+            --accent: #3498DB;
+            --gold: #D4AF37;
+            --light: #F5F7FA;
+            --dark: #1A252F;
+            --text: #2C3E50;
+            --white: #FFFFFF;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: var(--gold);
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo-subtext {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(26, 37, 47, 0.9)), url('https://images.unsplash.com/photo-1552422535-c458124c4e61?ixlib=rb-4.0.3') center/cover;
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-date {
+            display: inline-block;
+            background-color: var(--accent);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        /* Biography Section */
+        .biography {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        .biography-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .biography-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .biography-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .biography-image {
+            text-align: center;
+        }
+
+        .profile-placeholder {
+            width: 300px;
+            height: 400px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            box-shadow: var(--shadow);
+        }
+
+        .profile-placeholder i {
+            font-size: 5rem;
+            color: var(--gold);
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .mission-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 5px solid var(--accent);
+        }
+
+        .mission-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .mission-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        /* Encounter Section */
+        .encounter {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .encounter-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .encounter-timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .encounter-timeline::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: var(--accent);
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .timeline-point {
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            position: relative;
+            z-index: 2;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-text {
+            position: absolute;
+            top: -70px;
+            width: 200px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .timeline-text.left {
+            left: 0;
+        }
+
+        .timeline-text.right {
+            right: 0;
+        }
+
+        /* Legacy Section */
+        .legacy {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+
+        .legacy-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .legacy-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .legacy-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--secondary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .footer-column p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .biography-content {
+                grid-template-columns: 1fr;
+            }
+
+            .legacy-content {
+                grid-template-columns: 1fr;
+            }
+
+            .encounter-timeline {
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            .encounter-timeline::before {
+                width: 3px;
+                height: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .timeline-text {
+                position: static;
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-hands-helping"></i>
+                    <div>
+                        <div class="logo-text">George Smith</div>
+                        <div class="logo-subtext">Misionero y Mentor Espiritual</div>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#biografia">Biografía</a></li>
+                        <li><a href="#mision">Misión</a></li>
+                        <li><a href="#encuentro">Encuentro</a></li>
+                        <li><a href="#legado">Legado</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>George Smith</h1>
+            <p>El misionero de Worcester, Massachusetts que preparó a Ernest William Sellers para la obra religiosa</p>
+            <div class="hero-date">1924 - La Habana, Cuba</div>
+        </div>
+    </section>
+
+    <!-- Biography Section -->
+    <section id="biografia" class="biography">
+        <div class="container">
+            <div class="section-title">
+                <h2>Biografía</h2>
+                <p>El misionero que cambió el curso de la historia religiosa en Cuba</p>
+            </div>
+            <div class="biography-content">
+                <div class="biography-text">
+                    <h3>Misionero de Worcester, Massachusetts</h3>
+                    <p>George Smith llegó a La Habana, Cuba en el año 1924 procedente de Worcester, Massachusetts, Estados Unidos. Su misión específica era preparar a Ernest William Sellers para una obra religiosa que transformaría el panorama espiritual de Cuba.</p>
+                    <p>Aunque los registros históricos sobre su vida anterior son limitados, su impacto en la fundación de la Iglesia Bando Evangélico Gedeón fue fundamental y duradero.</p>
+                    <p>Smith representaba la tradición misionera norteamericana que buscaba expandir el evangelio más allá de las fronteras de Estados Unidos, llevando consigo las doctrinas de santidad y vida por fe que caracterizarían el ministerio de Sellers.</p>
+                </div>
+                <div class="biography-image">
+                    <div class="profile-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <p style="margin-top: 1rem; font-style: italic;">George Smith - Misionero</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mision" class="mission">
+        <div class="container">
+            <div class="section-title">
+                <h2>Misión en Cuba</h2>
+                <p>La labor transformadora de George Smith en La Habana</p>
+            </div>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Propósito Divino</h3>
+                    <p>Smith llegó a Cuba con un mandato específico: preparar a Ernest William Sellers para una obra religiosa significativa. Su misión no fue casual sino dirigida divinamente.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Preparación Espiritual</h3>
+                    <p>Durante cuatro meses intensivos, Smith instruyó a Sellers en los principios de la "vida por fe" y la renunciación completa a los bienes materiales para el servicio divino.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Sanidad Divina</h3>
+                    <p>El 2 de julio de 1924, Smith efectuó una sanidad milagrosa en Sellers, quien sufría de una grave desviación en su columna vertebral, fortaleciendo así su fe y ministerio.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-dove"></i>
+                    </div>
+                    <h3>Bautismo del Espíritu</h3>
+                    <p>Smith dirigió los cultos de espera en la promesa del Espíritu Santo donde Sellers recibió el bautismo del Espíritu Santo según Joel 2:28.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Encounter Section -->
+    <section id="encuentro" class="encounter">
+        <div class="container">
+            <div class="section-title">
+                <h2>El Encuentro Transformador</h2>
+                <p>La reunión que cambió el curso de la historia religiosa cubana</p>
+            </div>
+            <div class="encounter-content">
+                <p>El encuentro entre George Smith y Ernest William Sellers marcó un punto de inflexión en la historia del movimiento evangélico en Cuba. Smith, en uno de sus recorridos por las calles de La Habana, pasó frente al establecimiento comercial de Sellers y sintió la guía divina para entrar.</p>
+                
+                <div class="encounter-timeline">
+                    <div class="timeline-point">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="timeline-point">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="timeline-point">
+                        <i class="fas fa-pray"></i>
+                    </div>
+                    <div class="timeline-text left">Establecimiento de Sellers en La Habana</div>
+                    <div class="timeline-text right">Hasta la 1:00 AM primera entrevista</div>
+                </div>
+
+                <p>La primera entrevista entre ambos duró hasta la una de la madrugada, evidenciando la profundidad espiritual de su conversación y la importancia del mensaje que Smith traía para Sellers.</p>
+                <p>Este encuentro nocturno fue el inicio de un proceso de transformación que llevaría a Sellers a vender todos sus bienes - estimados en cerca de un millón de dólares - y dedicar su vida completamente al servicio de Dios.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy Section -->
+    <section id="legado" class="legacy">
+        <div class="container">
+            <div class="section-title">
+                <h2>Legado</h2>
+                <p>El impacto duradero del ministerio de George Smith</p>
+            </div>
+            <div class="legacy-content">
+                <div class="legacy-text">
+                    <h3>Un Mentor con Propósito Divino</h3>
+                    <p>Aunque George Smith permaneció relativamente poco tiempo en Cuba, su impacto fue monumental. Después de preparar a Sellers, regresó a Estados Unidos, y posteriormente recibió un mandato divino para partir hacia China, expandiendo así su labor misionera a otros continentes.</p>
+                    <p>Su legado se manifiesta en:</p>
+                    <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                        <li>La fundación de la Iglesia Bando Evangélico Gedeón</li>
+                        <li>La implementación de la doctrina de "vida por fe"</li>
+                        <li>El establecimiento de principios de santidad y renunciación</li>
+                        <li>La expansión del movimiento evangélico en Cuba</li>
+                    </ul>
+                </div>
+                <div class="legacy-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Meses de Preparación</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1</div>
+                        <div class="stat-label">Encuentro Transformador</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1M+</div>
+                        <div class="stat-label">Dólares Renunciados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Impacto Eterno</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>George Smith</h3>
+                    <p>Misionero de Worcester, Massachusetts que preparó a Ernest William Sellers para la obra religiosa en Cuba. Su legado perdura a través del ministerio que ayudó a establecer.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Relacionados</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Ernest William Sellers</a></li>
+                        <li><a href="#">Iglesia Bando Evangélico Gedeón</a></li>
+                        <li><a href="#">Historia del Movimiento Evangélico en Cuba</a></li>
+                        <li><a href="#">Doctrina de Vida por Fe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contexto Histórico</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Worcester, Massachusetts → La Habana, Cuba</p>
+                    <p><i class="fas fa-calendar"></i> Año 1924</p>
+                    <p><i class="fas fa-cross"></i> Misión Preparatoria</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados. | George Smith - Misionero y Mentor</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId.startsWith('#')) {
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe mission cards and other elements
+        document.querySelectorAll('.mission-card, .stat-card').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(item);
+        });
+    </script>
+</body>
+  </html>
