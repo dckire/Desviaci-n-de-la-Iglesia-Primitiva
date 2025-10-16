@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Mendiondo García | Apóstol Iglesia Soldados de la Cruz de Cristo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2C5530;
+            --secondary: #4A7C59;
+            --accent: #8FBC8F;
+            --gold: #D4AF37;
+            --light: #F5F7FA;
+            --dark: #1A2F1A;
+            --text: #2C3E50;
+            --white: #FFFFFF;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: var(--gold);
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo-subtext {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 85, 48, 0.9), rgba(26, 47, 26, 0.9)), url('https://images.unsplash.com/photo-1542401886-65d6c61db217?ixlib=rb-4.0.3') center/cover;
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-dates {
+            font-size: 1.2rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        /* Biography Section */
+        .biography {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .biography-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .biography-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .biography-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .biography-image {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .caption {
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--secondary);
+        }
+
+        /* Divine Message Section */
+        .divine-message {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+
+        .message-box {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .message-box::before {
+            content: '"';
+            font-size: 8rem;
+            color: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-family: Georgia, serif;
+        }
+
+        .message-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .message-reference {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--gold);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 10px;
+        }
+
+        .timeline-item {
+            margin-bottom: 4rem;
+            position: relative;
+            width: 50%;
+            padding: 0 40px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--light);
+            transform: rotate(45deg);
+            top: 20px;
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--light);
+            transform: rotate(45deg);
+            top: 20px;
+            left: -10px;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent);
+            border: 5px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            top: 0;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-icon {
+            right: -25px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -25px;
+        }
+
+        /* Legacy Section */
+        .legacy {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+
+        .legacy-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .legacy-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .legacy-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--secondary);
+        }
+
+        /* Memorial Section */
+        .memorial {
+            padding: 5rem 0;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .memorial-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .memorial-icon {
+            font-size: 4rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .footer-column p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .biography-content {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-icon,
+            .timeline-item:nth-child(even) .timeline-icon {
+                left: 6px;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                left: -10px;
+                right: auto;
+            }
+
+            .legacy-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-cross"></i>
+                    <div>
+                        <div class="logo-text">Samuel Mendiondo García</div>
+                        <div class="logo-subtext">Cuarto Apóstol Iglesia Soldados de la Cruz de Cristo</div>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#biografia">Biografía</a></li>
+                        <li><a href="#mensaje">Mensaje Divino</a></li>
+                        <li><a href="#cronologia">Cronología</a></li>
+                        <li><a href="#legado">Legado</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Samuel Mendiondo García</h1>
+            <div class="hero-dates">Cuarto Apóstol de la Iglesia (1966 - 1987)</div>
+            <p>El Apóstol que expandió la Iglesia internacionalmente con humildad y amor</p>
+        </div>
+    </section>
+
+    <!-- Biography Section -->
+    <section id="biografia" class="biography">
+        <div class="container">
+            <div class="section-title">
+                <h2>Biografía</h2>
+                <p>El humilde siervo de devoción y amor</p>
+            </div>
+            <div class="biography-content">
+                <div class="biography-text">
+                    <h3>Orígenes y Llamado Divino</h3>
+                    <p>Samuel Mendiondo García nació en la provincia de Matanzas, Cuba, el 31 de marzo de 1926. Fue hijo de Eusebio Mendiondo y Eustaquia García, quienes prometieron dedicarlo al Señor siete años antes de su nacimiento, por lo que fue nombrado «Samuel», como el profeta bíblico del Antiguo Testamento.</p>
+                    <p>Samuel sólo contaba con nueve años cuando una misionera del Bando Evangélico Gedeón visitó su hogar. Desde ese tiempo abrazó la fe de esta Iglesia y al cumplir doce años fue sumergido en las aguas del bautismo en el río San Juan, en la ciudad de Matanzas, el día 4 de octubre de 1938.</p>
+                    
+                    <h3>Vida Familiar y Ministerial</h3>
+                    <p>El día 3 de septiembre de 1947, se casó con la joven miembro de la Iglesia, Francisca Fernández, de cuya unión nacerían dos hijos. Ocho días después de casarse, junto con su esposa, dio su voto como discípulo de Cristo.</p>
+                    <p>Su carrera eclesiástica fue rápidamente en ascenso. En noviembre de 1948 fue ascendido a Soldado de la Cruz y en enero de 1949 obtuvo el grado de Maestro. Así fue creciendo, hasta que, en la última Conferencia celebrada por el Apóstol Ángel María Hernández, en Colón, provincia de Matanzas, el día 10 de junio de 1961, fue ascendido al grado de Obispo.</p>
+                </div>
+                <div class="biography-image">
+                    <div class="profile-img-placeholder" style="width: 100%; height: 400px; background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%); display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px;">
+                        <i class="fas fa-user" style="font-size: 5rem;"></i>
+                    </div>
+                    <p class="caption">Samuel Mendiondo García - Cuarto Apóstol</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divine Message Section -->
+    <section id="mensaje" class="divine-message">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Mensaje Divino</h2>
+                <p style="color: rgba(255,255,255,0.8)">La revelación recibida durante el bautismo del Espíritu Santo</p>
+            </div>
+            <div class="message-box">
+                <div class="message-text">
+                    "La verdad tiene que ser predicada; el mundo será reprendido; los días del fin se acercan, arrepiéntanse y anden honestamente o perecerán. Amén."
+                </div>
+                <div class="message-reference">
+                    Mensaje recibido el 19 de agosto de 1948 en un culto de espera dirigido por el Obispo Ángel Hernández
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="cronologia" class="timeline-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cronología del Ministerio</h2>
+                <p>Eventos clave en la vida y obra del Apóstol Samuel Mendiondo</p>
+            </div>
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">31 de marzo de 1926</div>
+                        <h3>Nacimiento</h3>
+                        <p>Nació en la provincia de Matanzas, Cuba, hijo de Eusebio Mendiondo y Eustaquia García.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">4 de octubre de 1938</div>
+                        <h3>Bautismo</h3>
+                        <p>Fue bautizado a los doce años en el río San Juan, en la ciudad de Matanzas.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">3 de septiembre de 1947</div>
+                        <h3>Matrimonio</h3>
+                        <p>Se casó con la joven miembro de la Iglesia, Francisca Fernández.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">11 de septiembre de 1947</div>
+                        <h3>Voto como Discípulo</h3>
+                        <p>Junto con su esposa, dio su voto como discípulo de Cristo ocho días después de casarse.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-dove"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">19 de agosto de 1948</div>
+                        <h3>Bautismo del Espíritu Santo</h3>
+                        <p>Recibió la promesa del Espíritu Santo en un culto de espera dirigido por el Obispo Ángel Hernández.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-cross"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Noviembre 1948</div>
+                        <h3>Ascenso a Soldado de la Cruz</h3>
+                        <p>Fue ascendido al grado de Soldado de la Cruz.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 7 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Enero 1949</div>
+                        <h3>Grado de Maestro</h3>
+                        <p>Obtuvo el grado de Maestro, continuando su crecimiento en el ministerio.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 8 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">10 de junio de 1961</div>
+                        <h3>Ascenso a Obispo</h3>
+                        <p>Fue ascendido al grado de Obispo en la última Conferencia celebrada por el Apóstol Ángel María Hernández en Colón, Matanzas.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 9 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">27 de febrero de 1968</div>
+                        <h3>Traslado a Estados Unidos</h3>
+                        <p>Partió con su esposa e hijo menor hacia Estados Unidos para establecer la nueva Oficina Central de la Iglesia.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 10 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1968-1971</div>
+                        <h3>Establecimiento en Tampa y Miami</h3>
+                        <p>Adquirió propiedades y estableció la primera Oficina Central en Tampa, Florida, luego trasladada a Miami.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 11 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">14 de mayo de 1971</div>
+                        <h3>Ascenso a Arzobispo</h3>
+                        <p>Fue ascendido al grado de Arzobispo durante la primera Conferencia Internacional en Tampa.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 12 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1971-1987</div>
+                        <h3>Expansión Internacional</h3>
+                        <p>Dirigió la reorganización y fortalecimiento de la Iglesia en países donde estaba fundada, expandiéndose incluso por países europeos.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 13 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1987</div>
+                        <h3>Ordenación como Apóstol</h3>
+                        <p>Junto con Florentino Almeida, recibió ordenación a Apóstol, continuando la sucesión apostólica.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 14 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">14 de octubre de 1987</div>
+                        <h3>Fallecimiento</h3>
+                        <p>Falleció dejando un legado de humildad, amor y total devoción a Dios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memorial Section -->
+    <section class="memorial">
+        <div class="container">
+            <div class="memorial-content">
+                <div class="memorial-icon">
+                    <i class="fas fa-hands-praying"></i>
+                </div>
+                <h2>Un Legado de Humildad y Amor</h2>
+                <p>Además de su testimonio fiel, la vida de Mendiondo se destacó por su virtud, humildad y amor. Fue conocido por tener siempre una palabra de aliento para sus hermanos y compañeros en la fe. Su total devoción y dedicación son merecedoras de reconocimiento entre los santos.</p>
+                <p>Este siervo de Dios dejó en su legado una estela de huellas con un testimonio intacto. Su ministerio no solo expandió la Iglesia internacionalmente, sino que fortaleció los cimientos espirituales de la congregación a través de su ejemplo de vida.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy Section -->
+    <section id="legado" class="legacy">
+        <div class="container">
+            <div class="section-title">
+                <h2>Legado y Obra</h2>
+                <p>El impacto del ministerio del Apóstol Samuel Mendiondo</p>
+            </div>
+            <div class="legacy-content">
+                <div class="legacy-text">
+                    <h3>Pionero de la Expansión Internacional</h3>
+                    <p>Samuel Mendiondo García fue fundamental en el traslado y establecimiento de la Oficina Central de la Iglesia en Estados Unidos. Ante las dificultades en Cuba, lideró este proceso con fe y determinación, estableciéndose primero en Tampa, Florida, y luego trasladando la administración a Miami.</p>
+                    <p>Bajo su liderazgo, la Iglesia se reorganizó y fortaleció en los países donde ya estaba presente, y se expandió a nuevas naciones, incluyendo países europeos donde fueron enviados numerosos misioneros.</p>
+                    <h3>Constructor de Templos y Comunidad</h3>
+                    <p>Durante su ministerio, en casi todos los lugares donde la Iglesia estaba representada se construyeron preciosos templos y casas pastorales, fortaleciendo la infraestructura física de la congregación internacional.</p>
+                    <p>Su legado perdura no solo en las estructuras físicas, sino en el fortalecimiento espiritual de la Iglesia y en la expansión continua de la obra que él ayudó a establecer internacionalmente.</p>
+                </div>
+                <div class="legacy-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">61</div>
+                        <div class="stat-label">Años de Vida</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">21</div>
+                        <div class="stat-label">Años de Apostolado</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Países de Expansión</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">49</div>
+                        <div class="stat-label">Años de Ministerio</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Samuel Mendiondo García</h3>
+                    <p>Cuarto Apóstol de la Iglesia Soldados de la Cruz de Cristo. Su humildad, amor y devoción expandieron la obra internacionalmente.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#biografia">Biografía</a></li>
+                        <li><a href="#mensaje">Mensaje Divino</a></li>
+                        <li><a href="#cronologia">Cronología</a></li>
+                        <li><a href="#legado">Legado</a></li>
+                        <li><a href="#">Sucesores</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Información</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Nacimiento: Matanzas, Cuba</p>
+                    <p><i class="fas fa-cross"></i> Ministerio: 1938 - 1987</p>
+                    <p><i class="fas fa-monument"></i> Legado: Expansión Internacional</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados. | Biografía de Samuel Mendiondo García</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId.startsWith('#')) {
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe timeline items and other content
+        document.querySelectorAll('.timeline-content, .biography-text, .legacy-text, .message-box, .memorial-content').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
