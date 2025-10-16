@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iglesia Misionera de los Discípulos de Jesucristo | Historia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2C5530;
+            --secondary: #4A7C59;
+            --accent: #8FBC8F;
+            --gold: #D4AF37;
+            --light: #F5F7FA;
+            --dark: #1A2F1A;
+            --text: #2C3E50;
+            --white: #FFFFFF;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: var(--gold);
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo-subtext {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 85, 48, 0.9), rgba(26, 47, 26, 0.9)), url('https://images.unsplash.com/photo-1542401886-65d6c61db217?ixlib=rb-4.0.3') center/cover;
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-dates {
+            font-size: 1.2rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        /* Split Section */
+        .split-section {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .split-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .split-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .split-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .split-image {
+            text-align: center;
+        }
+
+        .split-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .caption {
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--secondary);
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--gold);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 10px;
+        }
+
+        .timeline-item {
+            margin-bottom: 4rem;
+            position: relative;
+            width: 50%;
+            padding: 0 40px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--white);
+            transform: rotate(45deg);
+            top: 20px;
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--white);
+            transform: rotate(45deg);
+            top: 20px;
+            left: -10px;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent);
+            border: 5px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            top: 0;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-icon {
+            right: -25px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -25px;
+        }
+
+        /* Structure Section */
+        .structure {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .structure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .structure-card {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 4px solid var(--accent);
+        }
+
+        .structure-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .structure-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .structure-card p {
+            color: var(--secondary);
+        }
+
+        /* Apostolic Section */
+        .apostolic {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+
+        .apostolic-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .apostolic-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .apostolic-card {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .apostolic-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .apostolic-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .apostolic-card p {
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .footer-column p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .split-content {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-icon,
+            .timeline-item:nth-child(even) .timeline-icon {
+                left: 6px;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                left: -10px;
+                right: auto;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-cross"></i>
+                    <div>
+                        <div class="logo-text">Iglesia Misionera</div>
+                        <div class="logo-subtext">Discípulos de Jesucristo</div>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#reorganizacion">Reorganización</a></li>
+                        <li><a href="#legitimidad">Legitimidad</a></li>
+                        <li><a href="#nueva-iglesia">Nueva Iglesia</a></li>
+                        <li><a href="#estructura">Estructura</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Iglesia Misionera de los Discípulos de Jesucristo</h1>
+            <div class="hero-dates">1990 - Presente</div>
+            <p>La continuación del ministerio apostólico original</p>
+        </div>
+    </section>
+
+    <!-- Reorganization Section -->
+    <section id="reorganizacion" class="split-section">
+        <div class="container">
+            <div class="split-content">
+                <div class="split-text">
+                    <h2>Reorganización (1990-1993)</h2>
+                    <p>Un obispo llamado Rolando González Washington, líder de la iglesia en California y la región oeste de Estados Unidos, discrepó con lo que consideraba transgresiones dentro de la iglesia. Creía que ciertos cambios y otras cosas que no estaban permitidas bajo la administración de Sellers comenzaban a introducirse en la iglesia y no formaban parte de la doctrina original proclamada por Sellers.</p>
+                    <p>A principios de 1990, Rolando González dividió abiertamente la sección oeste de la iglesia de la sección este. Estableció su sede en Bell Gardens, California, y renombró la organización como Iglesia de los Soldados de la Cruz de Cristo del Estado de California.</p>
+                </div>
+                <div class="split-image">
+                    <div class="split-img-placeholder" style="width: 100%; height: 300px; background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%); display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px;">
+                        <i class="fas fa-church" style="font-size: 5rem;"></i>
+                    </div>
+                    <p class="caption">Separación de la Iglesia en 1990</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legitimacy Section -->
+    <section id="legitimidad" class="split-section" style="background-color: var(--light);">
+        <div class="container">
+            <div class="split-content">
+                <div class="split-image">
+                    <div class="split-img-placeholder" style="width: 100%; height: 300px; background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%); display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px;">
+                        <i class="fas fa-gavel" style="font-size: 5rem;"></i>
+                    </div>
+                    <p class="caption">Batallas legales por legitimidad</p>
+                </div>
+                <div class="split-text">
+                    <h2>Legitimidad (1990-1993)</h2>
+                    <p>Durante estos años, se produjeron varias batallas legales. Ambas facciones, la sede principal de California y la de Florida, se vieron envueltas en tribunales federales por cuestiones de legitimidad y soberanía.</p>
+                    <p>Como resultado, la iglesia de California tuvo que cambiar la apariencia de sus uniformes, insignias y logotipos. La iglesia cambió su nombre por última vez, pasando a llamarse Iglesia Misionera de los Discípulos de Jesucristo.</p>
+                    <p>Las razones esgrimidas para la separación fueron que la iglesia de Miami se había desviado de la doctrina original predicada por Daddy John (Ernest William Sellers) y, por lo tanto, ya no estaba guiada por el mismo Espíritu Santo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Church Section -->
+    <section id="nueva-iglesia" class="timeline-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>La Nueva Iglesia (1990-presente)</h2>
+                <p>Expansión y desarrollo de la Iglesia Misionera</p>
+            </div>
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1990</div>
+                        <h3>Entidad Independiente</h3>
+                        <p>Convertida oficialmente en una entidad legal independiente de la iglesia de Miami, la Iglesia Misionera, con sede en California, procedió a construir más iglesias y misiones gracias a la labor de sus misioneros.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1990-1993</div>
+                        <h3>Programa de Estudios Bíblicos</h3>
+                        <p>A los misioneros se les doctrina con la Biblia a través del programa Estudios Bíblicos.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1990-2000</div>
+                        <h3>Expansión Internacional</h3>
+                        <p>Se establecieron nuevas iglesias en diferentes partes del mundo, especialmente en América.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-broadcast-tower"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1980s-1990s</div>
+                        <h3>Programa Radial</h3>
+                        <p>La Iglesia Misionera contaba con su propio espacio radial llamado "Con la Biblia en la Mano", que transmitía todos los domingos por Radio KALY.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">26 de agosto de 1993</div>
+                        <h3>Ordenación de Rolando González</h3>
+                        <p>Rolando González fue ordenado Apóstol-Director de la Iglesia Misionera.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Mayo 1993</div>
+                        <h3>Traslado de Sede</h3>
+                        <p>Trasladó la sede principal de Bell Gardens, California, a Covina, California.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 7 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">10 de diciembre de 2004</div>
+                        <h3>Fallecimiento de Rolando González</h3>
+                        <p>Rolando González falleció, y fue sucedido por los Obispos César Rivera Lewis, Joel González y David Higuera Rolón.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 8 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2004-2007</div>
+                        <h3>Junta de Obispos</h3>
+                        <p>Marcó el inicio de la Junta de Obispos que finalizó en 2007, cuando César Rivera fue proclamado nuevo Apóstol-Director.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Structure Section -->
+    <section id="estructura" class="structure">
+        <div class="container">
+            <div class="section-title">
+                <h2>Organización y Estructura</h2>
+                <p>Rangos y responsabilidades en la Iglesia Misionera</p>
+            </div>
+            <div class="structure-grid">
+                <div class="structure-card">
+                    <h3>Apóstol-Director</h3>
+                    <p>Máxima autoridad de la Iglesia</p>
+                </div>
+                <div class="structure-card">
+                    <h3>Obispo</h3>
+                    <p>Supervisa regiones o diócesis</p>
+                </div>
+                <div class="structure-card">
+                    <h3>Superintendente Mayor</h3>
+                    <p>Coordina múltiples distritos</p>
+                </div>
+                <div class="structure-card">
+                    <h3>Superintendente</h3>
+                    <p>Administra distritos eclesiásticos</p>
+                </div>
+                <div class="structure-card">
+                    <h3>Supervisor Mayor</h3>
+                    <p>Supervisa grupos de congregaciones</p>
+                </div>
+                <div class="structure-card">
+                    <h3>Supervisor</h3>
+                    <p>Supervisa congregaciones locales</p>
+                </div>
+                <div class="structure-card">
+                    <h3>Superdiaconisa</h3>
+                    <p>Líder femenina de servicio</p>
+                </div>
+                <div class="structure-card">
+                    <h3>Diacona</h3>
+                    <p>Mujer con funciones diaconales</p>
+                </div>
+                <div class="structure-card">
+                    <h3>Diácono</h3>
+                    <p>Servidor de la congregación</p>
+                </div>
+                <div class="structure-card">
+                    <h3>Superevangelista</h3>
+                    <p>Líder evangelístico</p>
+                </div>
+                <div class="structure-card">
+                    <h3>Evangelista</h3>
+                    <p>Predicador itinerante</p>
+                </div>
+                <div class="structure-card">
+                    <h3>Pastor Evangelista</h3>
+                    <p>Pastor con énfasis evangelístico</p>
+                </div>
+                <div class="structure-card">
+                    <h3>Predicador</h3>
+                    <p>Ministro de la Palabra</p>
+                </div>
+                <div class="structure-card">
+                    <h3>Ungido</h3>
+                    <p>Miembro consagrado</p>
+                </div>
+                <div class="structure-card">
+                    <h3>Discípulo</h3>
+                    <p>Seguidor comprometido</p>
+                </div>
+                <div class="structure-card">
+                    <h3>Miembro</h3>
+                    <p>Parte de la congregación</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apostolic Succession Section -->
+    <section class="apostolic">
+        <div class="container">
+            <div class="apostolic-content">
+                <div class="section-title">
+                    <h2>Sucesión Apostólica</h2>
+                    <p>La Familia Apostólica según la Iglesia Misionera</p>
+                </div>
+                <p>Según la Iglesia Misionera, los Apóstoles son sucesores directos y la continuación del ministerio original encabezado por el Apóstol Pedro. El Directorio reconoce a Ernest William Sellers, Ángel María Hernández, Arturo Rangel, Samuel Mendiondo y Rolando G. Washington como sucesores de los doce apóstoles, creando así la línea de sucesión apostólica, a la que denominan la Familia Apostólica.</p>
+                <p>Sus funciones incluyen supervisar el bienestar integral de la iglesia y encabezar lo que denominan la Junta Apostólica de Oficiales del Consejo.</p>
+                
+                <div class="apostolic-list">
+                    <div class="apostolic-card">
+                        <h3>Ernest William Sellers</h3>
+                        <p>Primer Apóstol</p>
+                    </div>
+                    <div class="apostolic-card">
+                        <h3>Ángel María Hernández</h3>
+                        <p>Segundo Apóstol</p>
+                    </div>
+                    <div class="apostolic-card">
+                        <h3>Arturo Rangel</h3>
+                        <p>Tercer Apóstol</p>
+                    </div>
+                    <div class="apostolic-card">
+                        <h3>Samuel Mendiondo</h3>
+                        <p>Cuarto Apóstol</p>
+                    </div>
+                    <div class="apostolic-card">
+                        <h3>Rolando G. Washington</h3>
+                        <p>Quinto Apóstol</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Iglesia Misionera</h3>
+                    <p>Discípulos de Jesucristo. Continuación del ministerio apostólico original fundado por Ernest William Sellers.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#reorganizacion">Reorganización</a></li>
+                        <li><a href="#legitimidad">Legitimidad</a></li>
+                        <li><a href="#nueva-iglesia">Nueva Iglesia</a></li>
+                        <li><a href="#estructura">Estructura</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Información</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Sede: Covina, California</p>
+                    <p><i class="fas fa-cross"></i> Fundación: 1990</p>
+                    <p><i class="fas fa-user-tie"></i> Apóstol-Director: Rolando G. Washington</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados. | Historia de la Iglesia Misionera</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId.startsWith('#')) {
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe timeline items and other content
+        document.querySelectorAll('.timeline-content, .split-text, .structure-card, .apostolic-card').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
