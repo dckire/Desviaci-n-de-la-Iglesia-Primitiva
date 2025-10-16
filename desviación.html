@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florentino Almeida Morales | Apóstol Iglesia Soldados de la Cruz de Cristo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2C5530;
+            --secondary: #4A7C59;
+            --accent: #8FBC8F;
+            --gold: #D4AF37;
+            --light: #F5F7FA;
+            --dark: #1A2F1A;
+            --text: #2C3E50;
+            --white: #FFFFFF;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: var(--gold);
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo-subtext {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 85, 48, 0.9), rgba(26, 47, 26, 0.9)), url('https://images.unsplash.com/photo-1542401886-65d6c61db217?ixlib=rb-4.0.3') center/cover;
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-dates {
+            font-size: 1.2rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        /* Biography Section */
+        .biography {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .biography-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .biography-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .biography-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .biography-image {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .caption {
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--secondary);
+        }
+
+        /* Divine Message Section */
+        .divine-message {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+
+        .message-box {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .message-box::before {
+            content: '"';
+            font-size: 8rem;
+            color: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-family: Georgia, serif;
+        }
+
+        .message-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .message-reference {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--gold);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 10px;
+        }
+
+        .timeline-item {
+            margin-bottom: 4rem;
+            position: relative;
+            width: 50%;
+            padding: 0 40px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--light);
+            transform: rotate(45deg);
+            top: 20px;
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--light);
+            transform: rotate(45deg);
+            top: 20px;
+            left: -10px;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent);
+            border: 5px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            top: 0;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-icon {
+            right: -25px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -25px;
+        }
+
+        /* Legacy Section */
+        .legacy {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+
+        .legacy-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .legacy-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .legacy-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--secondary);
+        }
+
+        /* Transition Section */
+        .transition {
+            padding: 5rem 0;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .transition-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .transition-icon {
+            font-size: 4rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .transition-warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .transition-warning h3 {
+            color: #856404;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .footer-column p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .biography-content {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-icon,
+            .timeline-item:nth-child(even) .timeline-icon {
+                left: 6px;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                left: -10px;
+                right: auto;
+            }
+
+            .legacy-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-cross"></i>
+                    <div>
+                        <div class="logo-text">Florentino Almeida Morales</div>
+                        <div class="logo-subtext">Quinto Apóstol Iglesia Soldados de la Cruz de Cristo</div>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#biografia">Biografía</a></li>
+                        <li><a href="#cronologia">Cronología</a></li>
+                        <li><a href="#legado">Legado</a></li>
+                        <li><a href="#transicion">Transición</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Florentino Almeida Morales</h1>
+            <div class="hero-dates">Quinto Apóstol de la Iglesia (1987 - 2000)</div>
+            <p>El Apóstol que modernizó la Iglesia y estableció nuevas bases de gobierno</p>
+        </div>
+    </section>
+
+    <!-- Biography Section -->
+    <section id="biografia" class="biography">
+        <div class="container">
+            <div class="section-title">
+                <h2>Biografía</h2>
+                <p>El administrador visionario y organizador</p>
+            </div>
+            <div class="biography-content">
+                <div class="biography-text">
+                    <h3>Orígenes y Conversión</h3>
+                    <p>Florentino Almeida Morales nació en la provincia de Matanzas, Cuba, el 16 de octubre de 1927, en el lindo valle de Guamacaro, término municipal de Limonar. Cuando Florentino era pequeño, su familia se convirtió al Señor a través de la predicación de un misionero de la Iglesia llamado Lucas Ponce Frías.</p>
+                    <p>A la edad de 12 años, en 1939, fue sumergido en las aguas del bautismo en la localidad de Cabaiguán. En su juventud trabajó de dependiente en una bodega hasta que en 1948 lo dejó todo para servir al Señor y a su Iglesia, firmando como misionero.</p>
+                    
+                    <h3>Ministerio y Servicio</h3>
+                    <p>Por varios años, desde 1949, ocupó el cargo de secretario de la Iglesia y llegó a ser administrador en la Oficina Central en Playa de Baracoa. Su vida ministerial fue muy activa, llegando a organizar y dirigir por 18 años la Juventud Internacional.</p>
+                    <p>Fue un campañista incansable; junto a su esposa Mirtha Rodríguez visitaba las distintas localidades del país ayudando en lo que fuera necesario. Trabajó de manera especial con los niños, a tal grado que en una ocasión convocó un concurso bíblico y reunió a 600, llevándolos a todos a una excursión.</p>
+                </div>
+                <div class="biography-image">
+                    <div class="profile-img-placeholder" style="width: 100%; height: 400px; background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%); display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px;">
+                        <i class="fas fa-user" style="font-size: 5rem;"></i>
+                    </div>
+                    <p class="caption">Florentino Almeida Morales - Quinto Apóstol</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="cronologia" class="timeline-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cronología del Ministerio</h2>
+                <p>Eventos clave en la vida y obra del Apóstol Florentino Almeida</p>
+            </div>
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">16 de octubre de 1927</div>
+                        <h3>Nacimiento</h3>
+                        <p>Nació en el valle de Guamacaro, término municipal de Limonar, provincia de Matanzas, Cuba.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1939</div>
+                        <h3>Bautismo</h3>
+                        <p>Fue bautizado a los 12 años en la localidad de Cabaiguán.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1948</div>
+                        <h3>Consagración como Misionero</h3>
+                        <p>Dejó su trabajo como dependiente en una bodega para servir como misionero de tiempo completo.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1949</div>
+                        <h3>Secretario de la Iglesia</h3>
+                        <p>Ocupó el cargo de secretario de la Iglesia y posteriormente administrador en la Oficina Central.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1949-1967</div>
+                        <h3>Director de Juventud Internacional</h3>
+                        <p>Organizó y dirigió por 18 años la Juventud Internacional de la Iglesia.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1 de mayo de 1952</div>
+                        <h3>Fundación de Heraldo de la Juventud</h3>
+                        <p>Fundó la revista Heraldo de la Juventud, cuya primera edición salió a la luz.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 7 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1961-1966</div>
+                        <h3>Pastorado en Garrido</h3>
+                        <p>Atendió el pastorado en la localidad de Garrido durante 5 años, desde donde dirigió la Diócesis Oriental.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 8 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1966</div>
+                        <h3>Junta de Obispos</h3>
+                        <p>Se unió a Samuel Mendiondo en la Junta de Obispos al frente de toda la Iglesia.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 9 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1968</div>
+                        <h3>Traslado a Estados Unidos</h3>
+                        <p>Partió hacia Estados Unidos en busca de la ampliación y mejor desarrollo de la Obra.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 10 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1971</div>
+                        <h3>Ascenso a Arzobispo</h3>
+                        <p>Fue ascendido al grado de Arzobispo en Conferencia General celebrada en Tampa.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 11 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1987</div>
+                        <h3>Ordenación como Apóstol</h3>
+                        <p>Recibió ordenación a Apóstol junto con Samuel Mendiondo.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 12 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1989</div>
+                        <h3>Reglamento Interno</h3>
+                        <p>Comenzó a dar forma a un Reglamento Interno para establecer un Concilio Superior de gobierno.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 13 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1990</div>
+                        <h3>Mesa de Fe</h3>
+                        <p>Se comenzó a publicar mensualmente el primer devocionario oficial de la Iglesia.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 14 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1992</div>
+                        <h3>Modificación del Reglamento</h3>
+                        <p>El Reglamento Interno tuvo modificaciones importantes.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 15 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2000</div>
+                        <h3>Transición de Liderazgo</h3>
+                        <p>Cesió sus funciones como director, cuando el Arzobispo Luis Cruz Lara tomó posesión como presidente del Concilio Superior.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transition Section -->
+    <section id="transicion" class="transition">
+        <div class="container">
+            <div class="transition-content">
+                <div class="transition-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <h2>Una Época de Transición</h2>
+                <p>Florentino Almeida Morales lideró la Iglesia durante un período crucial de modernización y cambio estructural. Bajo su dirección, la Iglesia se incorporó a la era moderna, modificando su nombre, el diseño de las insignias, diferentes disciplinas y grados eclesiásticos.</p>
+                
+                <div class="transition-warning">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Un Cambio Histórico</h3>
+                    <p>Esta fue la época donde el vivir por fe y el renunciar a las cosas materiales por servir completamente a la causa de Cristo, como lo hicieron los apóstoles anteriores, perdió valor. La Iglesia tomaría otro rumbo, similar a cuando en los tiempos apostólicos, al morir los apóstoles, Roma tomó el control religioso.</p>
+                    <p>El establecimiento del Concilio Superior de gobierno y las bases para que el cargo de Apóstol no fuera vitalicio marcaron un cambio fundamental: la sucesión apostólica pasaría a ser determinada por hombres y no directamente por Dios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy Section -->
+    <section id="legado" class="legacy">
+        <div class="container">
+            <div class="section-title">
+                <h2>Legado y Obra</h2>
+                <p>El impacto del ministerio del Apóstol Florentino Almeida</p>
+            </div>
+            <div class="legacy-content">
+                <div class="legacy-text">
+                    <h3>Modernizador y Organizador</h3>
+                    <p>Florentino Almeida Morales fue fundamental en la modernización de la estructura eclesiástica. Durante su extensa dirección junto con Samuel Mendiondo y posteriormente como único director, la Iglesia experimentó transformaciones significativas que la prepararon para los desafíos del mundo contemporáneo.</p>
+                    <p>Su visión administrativa se manifestó en la creación de publicaciones como "Heraldo de la Juventud" y "Mesa de Fe", así como en la organización sistemática de la obra misionera y la estructura de gobierno de la Iglesia.</p>
+                    <h3>Arquitecto del Nuevo Gobierno Eclesiástico</h3>
+                    <p>El mayor legado de Florentino Almeida fue el establecimiento del Concilio Superior de gobierno, que planteó las bases para que el cargo de Apóstol no fuera vitalicio. Este cambio estructural marcó un punto de inflexión en la historia de la Iglesia, transitando de un liderazgo carismático a uno institucional.</p>
+                    <p>Su vida estuvo marcada por la guía del Espíritu Santo, siendo un ejemplo de valor, esfuerzo y santidad. Su legado de paz perdura hasta el día de hoy y la Iglesia lo admira por ser un hombre que ha sabido decir siempre presente al llamado de su Dueño y Señor.</p>
+                </div>
+                <div class="legacy-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">73</div>
+                        <div class="stat-label">Años de Vida</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">13</div>
+                        <div class="stat-label">Años como Apóstol</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">34</div>
+                        <div class="stat-label">Años de Dirección</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">18</div>
+                        <div class="stat-label">Años dirigiendo Juventud</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Florentino Almeida Morales</h3>
+                    <p>Quinto Apóstol de la Iglesia Soldados de la Cruz de Cristo. Su visión modernizadora transformó la estructura eclesiástica.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#biografia">Biografía</a></li>
+                        <li><a href="#cronologia">Cronología</a></li>
+                        <li><a href="#legado">Legado</a></li>
+                        <li><a href="#transicion">Transición</a></li>
+                        <li><a href="#">Sucesores</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Información</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Nacimiento: Guamacaro, Matanzas, Cuba</p>
+                    <p><i class="fas fa-cross"></i> Ministerio: 1948 - 2000</p>
+                    <p><i class="fas fa-gavel"></i> Legado: Concilio Superior</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados. | Biografía de Florentino Almeida Morales</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId.startsWith('#')) {
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe timeline items and other content
+        document.querySelectorAll('.timeline-content, .biography-text, .legacy-text, .transition-content').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
