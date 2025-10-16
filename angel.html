@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ángel María Hernández Esperón | Apóstol Iglesia Soldados de la Cruz de Cristo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --secondary: #34495E;
+            --accent: #3498DB;
+            --gold: #D4AF37;
+            --light: #F5F7FA;
+            --dark: #1A252F;
+            --text: #2C3E50;
+            --white: #FFFFFF;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: var(--gold);
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo-subtext {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(26, 37, 47, 0.9)), url('https://images.unsplash.com/photo-1542401886-65d6c61db217?ixlib=rb-4.0.3') center/cover;
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-dates {
+            font-size: 1.2rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        /* Biography Section */
+        .biography {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .biography-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .biography-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .biography-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .biography-image {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .caption {
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--secondary);
+        }
+
+        /* Divine Message Section */
+        .divine-message {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+
+        .message-box {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .message-box::before {
+            content: '"';
+            font-size: 8rem;
+            color: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-family: Georgia, serif;
+        }
+
+        .message-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .message-reference {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--gold);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 10px;
+        }
+
+        .timeline-item {
+            margin-bottom: 4rem;
+            position: relative;
+            width: 50%;
+            padding: 0 40px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--light);
+            transform: rotate(45deg);
+            top: 20px;
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--light);
+            transform: rotate(45deg);
+            top: 20px;
+            left: -10px;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent);
+            border: 5px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            top: 0;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-icon {
+            right: -25px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -25px;
+        }
+
+        /* Legacy Section */
+        .legacy {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+
+        .legacy-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .legacy-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .legacy-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--secondary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .footer-column p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .biography-content {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-icon,
+            .timeline-item:nth-child(even) .timeline-icon {
+                left: 6px;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                left: -10px;
+                right: auto;
+            }
+
+            .legacy-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-cross"></i>
+                    <div>
+                        <div class="logo-text">Ángel María Hernández Esperón</div>
+                        <div class="logo-subtext">Apóstol Iglesia Soldados de la Cruz de Cristo</div>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#biografia">Biografía</a></li>
+                        <li><a href="#mensaje">Mensaje Divino</a></li>
+                        <li><a href="#cronologia">Cronología</a></li>
+                        <li><a href="#legado">Legado</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Ángel María Hernández Esperón</h1>
+            <div class="hero-dates">Apóstol de la Iglesia (1953 - 1961)</div>
+            <p>Sucesor de Daddy John y segundo Apóstol de la Iglesia Soldados de la Cruz de Cristo</p>
+        </div>
+    </section>
+
+    <!-- Biography Section -->
+    <section id="biografia" class="biography">
+        <div class="container">
+            <div class="section-title">
+                <h2>Biografía</h2>
+                <p>El campesino convertido en Apóstol</p>
+            </div>
+            <div class="biography-content">
+                <div class="biography-text">
+                    <h3>Orígenes Humildes</h3>
+                    <p>Ángel María Hernández Esperón nació el 11 de enero de 1900 en el poblado de San Antonio de Río Blanco, muy cerca de Jaruco, antigua provincia de La Habana (hoy Mayabeque). Provenía de una familia campesina, era de mediana estatura, de ojos claros, rasgos finos y complexión fuerte.</p>
+                    <p>Formó una familia numerosa con su compañera de vida, Toribia Amate, trabajando inicialmente como arrendador de una finca llamada San José en el municipio de Guanajay.</p>
+                    
+                    <h3>Conversión y Llamamiento</h3>
+                    <p>Su encuentro con Dios se produjo a través de la prédica del Apóstol Daddy John, quien lo bautizó en el río Capellanías el 9 de agosto de 1937. Este encuentro marcó un punto de inflexión en su vida.</p>
+                    <p>El 26 de septiembre de 1940 hizo voto como misionero, y el 4 de noviembre de ese mismo año dejó todas sus pertenencias para servir a Dios y a la Iglesia en la localidad de Cascajal, demostrando una entrega total al ministerio.</p>
+                </div>
+                <div class="biography-image">
+                    <div class="profile-img-placeholder" style="width: 100%; height: 400px; background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%); display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px;">
+                        <i class="fas fa-user" style="font-size: 5rem;"></i>
+                    </div>
+                    <p class="caption">Ángel María Hernández Esperón - Segundo Apóstol</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divine Message Section -->
+    <section id="mensaje" class="divine-message">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Mensaje Divino</h2>
+                <p style="color: rgba(255,255,255,0.8)">La revelación recibida durante el bautismo del Espíritu Santo</p>
+            </div>
+            <div class="message-box">
+                <div class="message-text">
+                    "Solo los de limpio corazón verán a Dios. Solo los fieles discípulos pueden ser mis discípulos. Solo los siervos obedientes pueden ser usados, solo los tales pueden retener el don. Solo al siervo fiel llamaré mi amigo, solo los amigos fieles, de confianza, serán adoptados como hijos. Solo los hijos amantes que vencen al mundo serán nacidos de Dios, aceptados, sellados, salvados, no pueden pecar más, moran en mí y yo en ellos. Mi gloria."
+                </div>
+                <div class="message-reference">
+                    Mensaje recibido el 10 de abril de 1941 en Jovellanos, Matanzas, durante cultos de espera en la promesa del Espíritu Santo
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="cronologia" class="timeline-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cronología del Ministerio</h2>
+                <p>Eventos clave en la vida y obra del Apóstol Ángel María Hernández</p>
+            </div>
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">11 de enero de 1900</div>
+                        <h3>Nacimiento</h3>
+                        <p>Nació en San Antonio de Río Blanco, cerca de Jaruco, antigua provincia de La Habana (hoy Mayabeque), en el seno de una familia campesina.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">9 de agosto de 1937</div>
+                        <h3>Bautismo en el Río Capellanías</h3>
+                        <p>Fue bautizado por el Apóstol Daddy John, marcando el inicio de su camino espiritual en la Iglesia.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">26 de septiembre de 1940</div>
+                        <h3>Voto como Misionero</h3>
+                        <p>Hizo voto como misionero, comprometiéndose formalmente con la obra evangelizadora.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-cross"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">4 de noviembre de 1940</div>
+                        <h3>Entrega Total</h3>
+                        <p>Dejó todas sus pertenencias para servir a Dios y a la Iglesia en la localidad de Cascajal.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-dove"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">10 de abril de 1941</div>
+                        <h3>Bautismo del Espíritu Santo</h3>
+                        <p>Recibió la promesa del Espíritu Santo en Jovellanos, Matanzas, durante cultos dirigidos por Daddy John, donde recibió un mensaje divino.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">6 de mayo de 1947</div>
+                        <h3>Ordenado Obispo</h3>
+                        <p>Fue ordenado Obispo en una Conferencia General celebrada en Cabaiguán, Villa Clara.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 7 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1951</div>
+                        <h3>Obispo en Gran Escala</h3>
+                        <p>Fue nombrado Obispo en Gran Escala y Embajador Especial del Apóstol Daddy John, dirigiendo la Campaña de Evangelización y Sanidad Divina número uno.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 8 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">24 de febrero de 1953</div>
+                        <h3>Sucesión Apostólica</h3>
+                        <p>Tras el fallecimiento de Daddy John, asumió la dirección de la Iglesia según lo establecido en el testamento del fundador.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 9 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1953-1961</div>
+                        <h3>Obra Constructiva</h3>
+                        <p>Durante su apostolado, dio a la Iglesia una nueva imagen constructiva: edificó un salón de conferencias en Colón, reconstruyó la Escuela Preparatoria de Discípulos y reparó varios templos.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 10 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1953-1961</div>
+                        <h3>Expansión Internacional</h3>
+                        <p>Estableció obras en Costa Rica, Nicaragua, El Salvador, Guatemala, Estados Unidos y Chile, expandiendo significativamente el alcance de la Iglesia.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 11 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-bible"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">11 de junio de 1960</div>
+                        <h3>Profecía de su Partida</h3>
+                        <p>En su sermón "Deteniendo desertores", declaró públicamente que estaría solamente un año más con la Iglesia, después de que Dios le mostrara su propia muerte.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 12 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-cross"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">27 de diciembre de 1961</div>
+                        <h3>Fallecimiento</h3>
+                        <p>Partió al descanso eterno en Playa de Baracoa a la edad de 61 años, cumpliéndose su profecía. Sus restos descansan junto a los de Daddy John en Bauta, Cuba.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy Section -->
+    <section id="legado" class="legacy">
+        <div class="container">
+            <div class="section-title">
+                <h2>Legado Espiritual</h2>
+                <p>El impacto del ministerio del Apóstol Ángel María Hernández</p>
+            </div>
+            <div class="legacy-content">
+                <div class="legacy-text">
+                    <h3>Un Hombre de Santidad Extraordinaria</h3>
+                    <p>El Apóstol Ángel María Hernández fue reconocido por su santidad excepcional. Su consagración fue tan radical que incluso dejó su vida matrimonial para dedicarse por completo a Dios, demostrando un nivel de entrega poco común.</p>
+                    <p>Durante su apostolado, la Iglesia experimentó un tiempo de largos ayunos, exitosas campañas evangelísticas, santidad, disciplina y una búsqueda espiritual constante. Evidenció la dirección absoluta y el respaldo de Dios en la Obra.</p>
+                    <p>Fue conocido por su compasión y servicio: no hubo hermano afligido, enfermo o necesitado que él no socorriera. Su vida fue un ejemplo viviente del mensaje que predicaba.</p>
+                    <h3>Expansión y Consolidación</h3>
+                    <p>Bajo su liderazgo, la Iglesia no solo se consolidó en Cuba sino que se expandió internacionalmente, estableciendo obras en seis países adicionales. Su visión misionera transformó una iglesia nacional en un movimiento internacional.</p>
+                </div>
+                <div class="legacy-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">61</div>
+                        <div class="stat-label">Años de Vida</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Años de Apostolado</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Países Nuevos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Años de Ministerio</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Ángel María Hernández Esperón</h3>
+                    <p>Segundo Apóstol de la Iglesia Soldados de la Cruz de Cristo. Su vida de santidad y entrega total continúa inspirando a generaciones.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#biografia">Biografía</a></li>
+                        <li><a href="#mensaje">Mensaje Divino</a></li>
+                        <li><a href="#cronologia">Cronología</a></li>
+                        <li><a href="#legado">Legado</a></li>
+                        <li><a href="#">Sucesores</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Información</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Nacimiento: San Antonio de Río Blanco, Cuba</p>
+                    <p><i class="fas fa-cross"></i> Ministerio: 1937 - 1961</p>
+                    <p><i class="fas fa-monument"></i> Descanso: Cementerio de Bauta, Cuba</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados. | Biografía de Ángel María Hernández Esperón</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId.startsWith('#')) {
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe timeline items and other content
+        document.querySelectorAll('.timeline-content, .biography-text, .legacy-text, .message-box').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
